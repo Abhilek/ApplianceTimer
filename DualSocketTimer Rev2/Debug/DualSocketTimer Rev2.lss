@@ -1,0 +1,2608 @@
+
+DualSocketTimer Rev2.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00001176  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000202  00800060  00001176  0000120a  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000014  00800262  00800262  0000140c  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000140c  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  0000143c  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000170  00000000  00000000  00001478  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00001ce9  00000000  00000000  000015e8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000003a4  00000000  00000000  000032d1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   0000126a  00000000  00000000  00003675  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000004f4  00000000  00000000  000048e0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000006ee  00000000  00000000  00004dd4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000019b9  00000000  00000000  000054c2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000178  00000000  00000000  00006e7b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	ba c0       	rjmp	.+372    	; 0x176 <__ctors_end>
+       2:	d4 c0       	rjmp	.+424    	; 0x1ac <__bad_interrupt>
+       4:	d3 c0       	rjmp	.+422    	; 0x1ac <__bad_interrupt>
+       6:	d2 c0       	rjmp	.+420    	; 0x1ac <__bad_interrupt>
+       8:	d1 c0       	rjmp	.+418    	; 0x1ac <__bad_interrupt>
+       a:	d0 c0       	rjmp	.+416    	; 0x1ac <__bad_interrupt>
+       c:	cf c0       	rjmp	.+414    	; 0x1ac <__bad_interrupt>
+       e:	ce c0       	rjmp	.+412    	; 0x1ac <__bad_interrupt>
+      10:	f4 c3       	rjmp	.+2024   	; 0x7fa <__vector_8>
+      12:	cc c0       	rjmp	.+408    	; 0x1ac <__bad_interrupt>
+      14:	cb c0       	rjmp	.+406    	; 0x1ac <__bad_interrupt>
+      16:	ca c0       	rjmp	.+404    	; 0x1ac <__bad_interrupt>
+      18:	c9 c0       	rjmp	.+402    	; 0x1ac <__bad_interrupt>
+      1a:	c8 c0       	rjmp	.+400    	; 0x1ac <__bad_interrupt>
+      1c:	c7 c0       	rjmp	.+398    	; 0x1ac <__bad_interrupt>
+      1e:	c6 c0       	rjmp	.+396    	; 0x1ac <__bad_interrupt>
+      20:	c5 c0       	rjmp	.+394    	; 0x1ac <__bad_interrupt>
+      22:	c4 c0       	rjmp	.+392    	; 0x1ac <__bad_interrupt>
+      24:	c3 c0       	rjmp	.+390    	; 0x1ac <__bad_interrupt>
+      26:	b6 c3       	rjmp	.+1900   	; 0x794 <OLED_Printf+0x1de>
+      28:	ba c3       	rjmp	.+1908   	; 0x79e <OLED_Printf+0x1e8>
+      2a:	b9 c3       	rjmp	.+1906   	; 0x79e <OLED_Printf+0x1e8>
+      2c:	b8 c3       	rjmp	.+1904   	; 0x79e <OLED_Printf+0x1e8>
+      2e:	b7 c3       	rjmp	.+1902   	; 0x79e <OLED_Printf+0x1e8>
+      30:	b6 c3       	rjmp	.+1900   	; 0x79e <OLED_Printf+0x1e8>
+      32:	b5 c3       	rjmp	.+1898   	; 0x79e <OLED_Printf+0x1e8>
+      34:	b4 c3       	rjmp	.+1896   	; 0x79e <OLED_Printf+0x1e8>
+      36:	b3 c3       	rjmp	.+1894   	; 0x79e <OLED_Printf+0x1e8>
+      38:	b2 c3       	rjmp	.+1892   	; 0x79e <OLED_Printf+0x1e8>
+      3a:	b1 c3       	rjmp	.+1890   	; 0x79e <OLED_Printf+0x1e8>
+      3c:	b0 c3       	rjmp	.+1888   	; 0x79e <OLED_Printf+0x1e8>
+      3e:	af c3       	rjmp	.+1886   	; 0x79e <OLED_Printf+0x1e8>
+      40:	ae c3       	rjmp	.+1884   	; 0x79e <OLED_Printf+0x1e8>
+      42:	ad c3       	rjmp	.+1882   	; 0x79e <OLED_Printf+0x1e8>
+      44:	ac c3       	rjmp	.+1880   	; 0x79e <OLED_Printf+0x1e8>
+      46:	ab c3       	rjmp	.+1878   	; 0x79e <OLED_Printf+0x1e8>
+      48:	aa c3       	rjmp	.+1876   	; 0x79e <OLED_Printf+0x1e8>
+      4a:	a9 c3       	rjmp	.+1874   	; 0x79e <OLED_Printf+0x1e8>
+      4c:	a8 c3       	rjmp	.+1872   	; 0x79e <OLED_Printf+0x1e8>
+      4e:	a7 c3       	rjmp	.+1870   	; 0x79e <OLED_Printf+0x1e8>
+      50:	a6 c3       	rjmp	.+1868   	; 0x79e <OLED_Printf+0x1e8>
+      52:	a5 c3       	rjmp	.+1866   	; 0x79e <OLED_Printf+0x1e8>
+      54:	a4 c3       	rjmp	.+1864   	; 0x79e <OLED_Printf+0x1e8>
+      56:	a3 c3       	rjmp	.+1862   	; 0x79e <OLED_Printf+0x1e8>
+      58:	a2 c3       	rjmp	.+1860   	; 0x79e <OLED_Printf+0x1e8>
+      5a:	a1 c3       	rjmp	.+1858   	; 0x79e <OLED_Printf+0x1e8>
+      5c:	a0 c3       	rjmp	.+1856   	; 0x79e <OLED_Printf+0x1e8>
+      5e:	9f c3       	rjmp	.+1854   	; 0x79e <OLED_Printf+0x1e8>
+      60:	76 c3       	rjmp	.+1772   	; 0x74e <OLED_Printf+0x198>
+      62:	f7 c2       	rjmp	.+1518   	; 0x652 <OLED_Printf+0x9c>
+      64:	16 c3       	rjmp	.+1580   	; 0x692 <OLED_Printf+0xdc>
+      66:	9b c3       	rjmp	.+1846   	; 0x79e <OLED_Printf+0x1e8>
+      68:	81 c3       	rjmp	.+1794   	; 0x76c <OLED_Printf+0x1b6>
+      6a:	99 c3       	rjmp	.+1842   	; 0x79e <OLED_Printf+0x1e8>
+      6c:	98 c3       	rjmp	.+1840   	; 0x79e <OLED_Printf+0x1e8>
+      6e:	97 c3       	rjmp	.+1838   	; 0x79e <OLED_Printf+0x1e8>
+      70:	96 c3       	rjmp	.+1836   	; 0x79e <OLED_Printf+0x1e8>
+      72:	95 c3       	rjmp	.+1834   	; 0x79e <OLED_Printf+0x1e8>
+      74:	94 c3       	rjmp	.+1832   	; 0x79e <OLED_Printf+0x1e8>
+      76:	93 c3       	rjmp	.+1830   	; 0x79e <OLED_Printf+0x1e8>
+      78:	92 c3       	rjmp	.+1828   	; 0x79e <OLED_Printf+0x1e8>
+      7a:	91 c3       	rjmp	.+1826   	; 0x79e <OLED_Printf+0x1e8>
+      7c:	90 c3       	rjmp	.+1824   	; 0x79e <OLED_Printf+0x1e8>
+      7e:	8f c3       	rjmp	.+1822   	; 0x79e <OLED_Printf+0x1e8>
+      80:	8e c3       	rjmp	.+1820   	; 0x79e <OLED_Printf+0x1e8>
+      82:	7e c3       	rjmp	.+1788   	; 0x780 <OLED_Printf+0x1ca>
+      84:	8c c3       	rjmp	.+1816   	; 0x79e <OLED_Printf+0x1e8>
+      86:	2d c3       	rjmp	.+1626   	; 0x6e2 <OLED_Printf+0x12c>
+      88:	8a c3       	rjmp	.+1812   	; 0x79e <OLED_Printf+0x1e8>
+      8a:	89 c3       	rjmp	.+1810   	; 0x79e <OLED_Printf+0x1e8>
+      8c:	44 c3       	rjmp	.+1672   	; 0x716 <OLED_Printf+0x160>
+      8e:	87 c3       	rjmp	.+1806   	; 0x79e <OLED_Printf+0x1e8>
+      90:	86 c3       	rjmp	.+1804   	; 0x79e <OLED_Printf+0x1e8>
+      92:	85 c3       	rjmp	.+1802   	; 0x79e <OLED_Printf+0x1e8>
+      94:	84 c3       	rjmp	.+1800   	; 0x79e <OLED_Printf+0x1e8>
+      96:	83 c3       	rjmp	.+1798   	; 0x79e <OLED_Printf+0x1e8>
+      98:	82 c3       	rjmp	.+1796   	; 0x79e <OLED_Printf+0x1e8>
+      9a:	81 c3       	rjmp	.+1794   	; 0x79e <OLED_Printf+0x1e8>
+      9c:	80 c3       	rjmp	.+1792   	; 0x79e <OLED_Printf+0x1e8>
+      9e:	7f c3       	rjmp	.+1790   	; 0x79e <OLED_Printf+0x1e8>
+      a0:	47 c3       	rjmp	.+1678   	; 0x730 <OLED_Printf+0x17a>
+      a2:	d7 c2       	rjmp	.+1454   	; 0x652 <OLED_Printf+0x9c>
+      a4:	e0 c2       	rjmp	.+1472   	; 0x666 <OLED_Printf+0xb0>
+      a6:	7b c3       	rjmp	.+1782   	; 0x79e <OLED_Printf+0x1e8>
+      a8:	61 c3       	rjmp	.+1730   	; 0x76c <OLED_Printf+0x1b6>
+      aa:	79 c3       	rjmp	.+1778   	; 0x79e <OLED_Printf+0x1e8>
+      ac:	78 c3       	rjmp	.+1776   	; 0x79e <OLED_Printf+0x1e8>
+      ae:	77 c3       	rjmp	.+1774   	; 0x79e <OLED_Printf+0x1e8>
+      b0:	76 c3       	rjmp	.+1772   	; 0x79e <OLED_Printf+0x1e8>
+      b2:	75 c3       	rjmp	.+1770   	; 0x79e <OLED_Printf+0x1e8>
+      b4:	74 c3       	rjmp	.+1768   	; 0x79e <OLED_Printf+0x1e8>
+      b6:	73 c3       	rjmp	.+1766   	; 0x79e <OLED_Printf+0x1e8>
+      b8:	72 c3       	rjmp	.+1764   	; 0x79e <OLED_Printf+0x1e8>
+      ba:	71 c3       	rjmp	.+1762   	; 0x79e <OLED_Printf+0x1e8>
+      bc:	70 c3       	rjmp	.+1760   	; 0x79e <OLED_Printf+0x1e8>
+      be:	6f c3       	rjmp	.+1758   	; 0x79e <OLED_Printf+0x1e8>
+      c0:	6e c3       	rjmp	.+1756   	; 0x79e <OLED_Printf+0x1e8>
+      c2:	5e c3       	rjmp	.+1724   	; 0x780 <OLED_Printf+0x1ca>
+      c4:	6c c3       	rjmp	.+1752   	; 0x79e <OLED_Printf+0x1e8>
+      c6:	00 c3       	rjmp	.+1536   	; 0x6c8 <OLED_Printf+0x112>
+      c8:	6a c3       	rjmp	.+1748   	; 0x79e <OLED_Printf+0x1e8>
+      ca:	69 c3       	rjmp	.+1746   	; 0x79e <OLED_Printf+0x1e8>
+      cc:	17 c3       	rjmp	.+1582   	; 0x6fc <OLED_Printf+0x146>
+      ce:	62 c3       	rjmp	.+1732   	; 0x794 <OLED_Printf+0x1de>
+      d0:	66 c3       	rjmp	.+1740   	; 0x79e <OLED_Printf+0x1e8>
+      d2:	65 c3       	rjmp	.+1738   	; 0x79e <OLED_Printf+0x1e8>
+      d4:	64 c3       	rjmp	.+1736   	; 0x79e <OLED_Printf+0x1e8>
+      d6:	63 c3       	rjmp	.+1734   	; 0x79e <OLED_Printf+0x1e8>
+      d8:	62 c3       	rjmp	.+1732   	; 0x79e <OLED_Printf+0x1e8>
+      da:	61 c3       	rjmp	.+1730   	; 0x79e <OLED_Printf+0x1e8>
+      dc:	60 c3       	rjmp	.+1728   	; 0x79e <OLED_Printf+0x1e8>
+      de:	5f c3       	rjmp	.+1726   	; 0x79e <OLED_Printf+0x1e8>
+      e0:	5e c3       	rjmp	.+1724   	; 0x79e <OLED_Printf+0x1e8>
+      e2:	5d c3       	rjmp	.+1722   	; 0x79e <OLED_Printf+0x1e8>
+      e4:	5c c3       	rjmp	.+1720   	; 0x79e <OLED_Printf+0x1e8>
+      e6:	5b c3       	rjmp	.+1718   	; 0x79e <OLED_Printf+0x1e8>
+      e8:	5a c3       	rjmp	.+1716   	; 0x79e <OLED_Printf+0x1e8>
+      ea:	59 c3       	rjmp	.+1714   	; 0x79e <OLED_Printf+0x1e8>
+      ec:	58 c3       	rjmp	.+1712   	; 0x79e <OLED_Printf+0x1e8>
+      ee:	57 c3       	rjmp	.+1710   	; 0x79e <OLED_Printf+0x1e8>
+      f0:	56 c3       	rjmp	.+1708   	; 0x79e <OLED_Printf+0x1e8>
+      f2:	55 c3       	rjmp	.+1706   	; 0x79e <OLED_Printf+0x1e8>
+      f4:	54 c3       	rjmp	.+1704   	; 0x79e <OLED_Printf+0x1e8>
+      f6:	53 c3       	rjmp	.+1702   	; 0x79e <OLED_Printf+0x1e8>
+      f8:	52 c3       	rjmp	.+1700   	; 0x79e <OLED_Printf+0x1e8>
+      fa:	51 c3       	rjmp	.+1698   	; 0x79e <OLED_Printf+0x1e8>
+      fc:	50 c3       	rjmp	.+1696   	; 0x79e <OLED_Printf+0x1e8>
+      fe:	4f c3       	rjmp	.+1694   	; 0x79e <OLED_Printf+0x1e8>
+     100:	4e c3       	rjmp	.+1692   	; 0x79e <OLED_Printf+0x1e8>
+     102:	4d c3       	rjmp	.+1690   	; 0x79e <OLED_Printf+0x1e8>
+     104:	4c c3       	rjmp	.+1688   	; 0x79e <OLED_Printf+0x1e8>
+     106:	4b c3       	rjmp	.+1686   	; 0x79e <OLED_Printf+0x1e8>
+     108:	53 c3       	rjmp	.+1702   	; 0x7b0 <OLED_Printf+0x1fa>
+     10a:	a3 c2       	rjmp	.+1350   	; 0x652 <OLED_Printf+0x9c>
+     10c:	c1 c2       	rjmp	.+1410   	; 0x690 <OLED_Printf+0xda>
+     10e:	47 c3       	rjmp	.+1678   	; 0x79e <OLED_Printf+0x1e8>
+     110:	2d c3       	rjmp	.+1626   	; 0x76c <OLED_Printf+0x1b6>
+     112:	45 c3       	rjmp	.+1674   	; 0x79e <OLED_Printf+0x1e8>
+     114:	44 c3       	rjmp	.+1672   	; 0x79e <OLED_Printf+0x1e8>
+     116:	43 c3       	rjmp	.+1670   	; 0x79e <OLED_Printf+0x1e8>
+     118:	42 c3       	rjmp	.+1668   	; 0x79e <OLED_Printf+0x1e8>
+     11a:	41 c3       	rjmp	.+1666   	; 0x79e <OLED_Printf+0x1e8>
+     11c:	40 c3       	rjmp	.+1664   	; 0x79e <OLED_Printf+0x1e8>
+     11e:	3f c3       	rjmp	.+1662   	; 0x79e <OLED_Printf+0x1e8>
+     120:	3e c3       	rjmp	.+1660   	; 0x79e <OLED_Printf+0x1e8>
+     122:	3d c3       	rjmp	.+1658   	; 0x79e <OLED_Printf+0x1e8>
+     124:	3c c3       	rjmp	.+1656   	; 0x79e <OLED_Printf+0x1e8>
+     126:	3b c3       	rjmp	.+1654   	; 0x79e <OLED_Printf+0x1e8>
+     128:	3a c3       	rjmp	.+1652   	; 0x79e <OLED_Printf+0x1e8>
+     12a:	2a c3       	rjmp	.+1620   	; 0x780 <OLED_Printf+0x1ca>
+     12c:	38 c3       	rjmp	.+1648   	; 0x79e <OLED_Printf+0x1e8>
+     12e:	d8 c2       	rjmp	.+1456   	; 0x6e0 <OLED_Printf+0x12a>
+     130:	36 c3       	rjmp	.+1644   	; 0x79e <OLED_Printf+0x1e8>
+     132:	35 c3       	rjmp	.+1642   	; 0x79e <OLED_Printf+0x1e8>
+     134:	ef c2       	rjmp	.+1502   	; 0x714 <OLED_Printf+0x15e>
+     136:	33 c3       	rjmp	.+1638   	; 0x79e <OLED_Printf+0x1e8>
+     138:	32 c3       	rjmp	.+1636   	; 0x79e <OLED_Printf+0x1e8>
+     13a:	31 c3       	rjmp	.+1634   	; 0x79e <OLED_Printf+0x1e8>
+     13c:	30 c3       	rjmp	.+1632   	; 0x79e <OLED_Printf+0x1e8>
+     13e:	2f c3       	rjmp	.+1630   	; 0x79e <OLED_Printf+0x1e8>
+     140:	2e c3       	rjmp	.+1628   	; 0x79e <OLED_Printf+0x1e8>
+     142:	2d c3       	rjmp	.+1626   	; 0x79e <OLED_Printf+0x1e8>
+     144:	2c c3       	rjmp	.+1624   	; 0x79e <OLED_Printf+0x1e8>
+     146:	2b c3       	rjmp	.+1622   	; 0x79e <OLED_Printf+0x1e8>
+     148:	f2 c2       	rjmp	.+1508   	; 0x72e <OLED_Printf+0x178>
+     14a:	83 c2       	rjmp	.+1286   	; 0x652 <OLED_Printf+0x9c>
+     14c:	8b c2       	rjmp	.+1302   	; 0x664 <OLED_Printf+0xae>
+     14e:	27 c3       	rjmp	.+1614   	; 0x79e <OLED_Printf+0x1e8>
+     150:	0d c3       	rjmp	.+1562   	; 0x76c <OLED_Printf+0x1b6>
+     152:	25 c3       	rjmp	.+1610   	; 0x79e <OLED_Printf+0x1e8>
+     154:	24 c3       	rjmp	.+1608   	; 0x79e <OLED_Printf+0x1e8>
+     156:	23 c3       	rjmp	.+1606   	; 0x79e <OLED_Printf+0x1e8>
+     158:	22 c3       	rjmp	.+1604   	; 0x79e <OLED_Printf+0x1e8>
+     15a:	21 c3       	rjmp	.+1602   	; 0x79e <OLED_Printf+0x1e8>
+     15c:	20 c3       	rjmp	.+1600   	; 0x79e <OLED_Printf+0x1e8>
+     15e:	1f c3       	rjmp	.+1598   	; 0x79e <OLED_Printf+0x1e8>
+     160:	1e c3       	rjmp	.+1596   	; 0x79e <OLED_Printf+0x1e8>
+     162:	1d c3       	rjmp	.+1594   	; 0x79e <OLED_Printf+0x1e8>
+     164:	1c c3       	rjmp	.+1592   	; 0x79e <OLED_Printf+0x1e8>
+     166:	1b c3       	rjmp	.+1590   	; 0x79e <OLED_Printf+0x1e8>
+     168:	1a c3       	rjmp	.+1588   	; 0x79e <OLED_Printf+0x1e8>
+     16a:	0a c3       	rjmp	.+1556   	; 0x780 <OLED_Printf+0x1ca>
+     16c:	18 c3       	rjmp	.+1584   	; 0x79e <OLED_Printf+0x1e8>
+     16e:	ab c2       	rjmp	.+1366   	; 0x6c6 <OLED_Printf+0x110>
+     170:	16 c3       	rjmp	.+1580   	; 0x79e <OLED_Printf+0x1e8>
+     172:	15 c3       	rjmp	.+1578   	; 0x79e <OLED_Printf+0x1e8>
+     174:	c2 c2       	rjmp	.+1412   	; 0x6fa <OLED_Printf+0x144>
+
+00000176 <__ctors_end>:
+     176:	11 24       	eor	r1, r1
+     178:	1f be       	out	0x3f, r1	; 63
+     17a:	cf e5       	ldi	r28, 0x5F	; 95
+     17c:	d4 e0       	ldi	r29, 0x04	; 4
+     17e:	de bf       	out	0x3e, r29	; 62
+     180:	cd bf       	out	0x3d, r28	; 61
+
+00000182 <__do_copy_data>:
+     182:	12 e0       	ldi	r17, 0x02	; 2
+     184:	a0 e6       	ldi	r26, 0x60	; 96
+     186:	b0 e0       	ldi	r27, 0x00	; 0
+     188:	e6 e7       	ldi	r30, 0x76	; 118
+     18a:	f1 e1       	ldi	r31, 0x11	; 17
+     18c:	02 c0       	rjmp	.+4      	; 0x192 <__do_copy_data+0x10>
+     18e:	05 90       	lpm	r0, Z+
+     190:	0d 92       	st	X+, r0
+     192:	a2 36       	cpi	r26, 0x62	; 98
+     194:	b1 07       	cpc	r27, r17
+     196:	d9 f7       	brne	.-10     	; 0x18e <__do_copy_data+0xc>
+
+00000198 <__do_clear_bss>:
+     198:	22 e0       	ldi	r18, 0x02	; 2
+     19a:	a2 e6       	ldi	r26, 0x62	; 98
+     19c:	b2 e0       	ldi	r27, 0x02	; 2
+     19e:	01 c0       	rjmp	.+2      	; 0x1a2 <.do_clear_bss_start>
+
+000001a0 <.do_clear_bss_loop>:
+     1a0:	1d 92       	st	X+, r1
+
+000001a2 <.do_clear_bss_start>:
+     1a2:	a6 37       	cpi	r26, 0x76	; 118
+     1a4:	b2 07       	cpc	r27, r18
+     1a6:	e1 f7       	brne	.-8      	; 0x1a0 <.do_clear_bss_loop>
+     1a8:	0e d5       	rcall	.+2588   	; 0xbc6 <main>
+     1aa:	e3 c7       	rjmp	.+4038   	; 0x1172 <_exit>
+
+000001ac <__bad_interrupt>:
+     1ac:	29 cf       	rjmp	.-430    	; 0x0 <__vectors>
+
+000001ae <i2c_init>:
+#if (Enable_OLED_SetBrightness == 1)
+void OLED_SetBrightness(uint8_t brightnessValue)
+{
+    oledSendCommand(SSD1306_SET_CONTRAST_CONTROL);
+    oledSendCommand(brightnessValue);
+}
+     1ae:	81 b1       	in	r24, 0x01	; 1
+     1b0:	8c 7f       	andi	r24, 0xFC	; 252
+     1b2:	81 b9       	out	0x01, r24	; 1
+     1b4:	88 e9       	ldi	r24, 0x98	; 152
+     1b6:	80 b9       	out	0x00, r24	; 0
+     1b8:	08 95       	ret
+
+000001ba <i2c_tx_start>:
+     1ba:	80 93 73 02 	sts	0x0273, r24	; 0x800273 <masterMode>
+     1be:	86 b7       	in	r24, 0x36	; 54
+     1c0:	84 6a       	ori	r24, 0xA4	; 164
+     1c2:	86 bf       	out	0x36, r24	; 54
+     1c4:	06 b6       	in	r0, 0x36	; 54
+     1c6:	07 fe       	sbrs	r0, 7
+     1c8:	fd cf       	rjmp	.-6      	; 0x1c4 <i2c_tx_start+0xa>
+     1ca:	81 b1       	in	r24, 0x01	; 1
+     1cc:	88 7f       	andi	r24, 0xF8	; 248
+     1ce:	88 30       	cpi	r24, 0x08	; 8
+     1d0:	21 f0       	breq	.+8      	; 0x1da <i2c_tx_start+0x20>
+     1d2:	80 31       	cpi	r24, 0x10	; 16
+     1d4:	11 f0       	breq	.+4      	; 0x1da <i2c_tx_start+0x20>
+     1d6:	8e ef       	ldi	r24, 0xFE	; 254
+     1d8:	08 95       	ret
+     1da:	8f ef       	ldi	r24, 0xFF	; 255
+     1dc:	08 95       	ret
+
+000001de <i2c_tx_address>:
+     1de:	88 0f       	add	r24, r24
+     1e0:	90 91 73 02 	lds	r25, 0x0273	; 0x800273 <masterMode>
+     1e4:	89 2b       	or	r24, r25
+     1e6:	83 b9       	out	0x03, r24	; 3
+     1e8:	86 b7       	in	r24, 0x36	; 54
+     1ea:	8f 7d       	andi	r24, 0xDF	; 223
+     1ec:	86 bf       	out	0x36, r24	; 54
+     1ee:	86 b7       	in	r24, 0x36	; 54
+     1f0:	80 68       	ori	r24, 0x80	; 128
+     1f2:	86 bf       	out	0x36, r24	; 54
+     1f4:	06 b6       	in	r0, 0x36	; 54
+     1f6:	07 fe       	sbrs	r0, 7
+     1f8:	fd cf       	rjmp	.-6      	; 0x1f4 <i2c_tx_address+0x16>
+     1fa:	80 91 73 02 	lds	r24, 0x0273	; 0x800273 <masterMode>
+     1fe:	81 11       	cpse	r24, r1
+     200:	06 c0       	rjmp	.+12     	; 0x20e <i2c_tx_address+0x30>
+     202:	81 b1       	in	r24, 0x01	; 1
+     204:	88 7f       	andi	r24, 0xF8	; 248
+     206:	88 31       	cpi	r24, 0x18	; 24
+     208:	51 f0       	breq	.+20     	; 0x21e <i2c_tx_address+0x40>
+     20a:	8e ef       	ldi	r24, 0xFE	; 254
+     20c:	08 95       	ret
+     20e:	81 30       	cpi	r24, 0x01	; 1
+     210:	41 f4       	brne	.+16     	; 0x222 <i2c_tx_address+0x44>
+     212:	81 b1       	in	r24, 0x01	; 1
+     214:	88 7f       	andi	r24, 0xF8	; 248
+     216:	80 34       	cpi	r24, 0x40	; 64
+     218:	31 f0       	breq	.+12     	; 0x226 <i2c_tx_address+0x48>
+     21a:	8e ef       	ldi	r24, 0xFE	; 254
+     21c:	08 95       	ret
+     21e:	8f ef       	ldi	r24, 0xFF	; 255
+     220:	08 95       	ret
+     222:	80 e0       	ldi	r24, 0x00	; 0
+     224:	08 95       	ret
+     226:	8f ef       	ldi	r24, 0xFF	; 255
+     228:	08 95       	ret
+
+0000022a <oledSendStart>:
+     22a:	cf 93       	push	r28
+     22c:	c8 2f       	mov	r28, r24
+     22e:	80 e0       	ldi	r24, 0x00	; 0
+     230:	c4 df       	rcall	.-120    	; 0x1ba <i2c_tx_start>
+     232:	8c 2f       	mov	r24, r28
+     234:	d4 df       	rcall	.-88     	; 0x1de <i2c_tx_address>
+     236:	cf 91       	pop	r28
+     238:	08 95       	ret
+
+0000023a <i2c_tx_byte>:
+     23a:	83 b9       	out	0x03, r24	; 3
+     23c:	86 b7       	in	r24, 0x36	; 54
+     23e:	80 68       	ori	r24, 0x80	; 128
+     240:	86 bf       	out	0x36, r24	; 54
+     242:	06 b6       	in	r0, 0x36	; 54
+     244:	07 fe       	sbrs	r0, 7
+     246:	fd cf       	rjmp	.-6      	; 0x242 <i2c_tx_byte+0x8>
+     248:	81 b1       	in	r24, 0x01	; 1
+     24a:	88 7f       	andi	r24, 0xF8	; 248
+     24c:	88 32       	cpi	r24, 0x28	; 40
+     24e:	11 f0       	breq	.+4      	; 0x254 <i2c_tx_byte+0x1a>
+     250:	8e ef       	ldi	r24, 0xFE	; 254
+     252:	08 95       	ret
+     254:	8f ef       	ldi	r24, 0xFF	; 255
+     256:	08 95       	ret
+
+00000258 <i2c_tx_stop>:
+     258:	86 b7       	in	r24, 0x36	; 54
+     25a:	80 69       	ori	r24, 0x90	; 144
+     25c:	86 bf       	out	0x36, r24	; 54
+     25e:	06 b6       	in	r0, 0x36	; 54
+     260:	04 fe       	sbrs	r0, 4
+     262:	fd cf       	rjmp	.-6      	; 0x25e <i2c_tx_stop+0x6>
+     264:	08 95       	ret
+
+00000266 <oledSendCommand>:
+     266:	cf 93       	push	r28
+     268:	c8 2f       	mov	r28, r24
+     26a:	8c e3       	ldi	r24, 0x3C	; 60
+     26c:	de df       	rcall	.-68     	; 0x22a <oledSendStart>
+     26e:	80 e0       	ldi	r24, 0x00	; 0
+     270:	e4 df       	rcall	.-56     	; 0x23a <i2c_tx_byte>
+     272:	8c 2f       	mov	r24, r28
+     274:	e2 df       	rcall	.-60     	; 0x23a <i2c_tx_byte>
+     276:	f0 df       	rcall	.-32     	; 0x258 <i2c_tx_stop>
+     278:	cf 91       	pop	r28
+     27a:	08 95       	ret
+
+0000027c <OLED_Clear>:
+     27c:	cf 93       	push	r28
+     27e:	df 93       	push	r29
+     280:	81 e2       	ldi	r24, 0x21	; 33
+     282:	f1 df       	rcall	.-30     	; 0x266 <oledSendCommand>
+     284:	80 e0       	ldi	r24, 0x00	; 0
+     286:	ef df       	rcall	.-34     	; 0x266 <oledSendCommand>
+     288:	8f e7       	ldi	r24, 0x7F	; 127
+     28a:	ed df       	rcall	.-38     	; 0x266 <oledSendCommand>
+     28c:	82 e2       	ldi	r24, 0x22	; 34
+     28e:	eb df       	rcall	.-42     	; 0x266 <oledSendCommand>
+     290:	80 e0       	ldi	r24, 0x00	; 0
+     292:	e9 df       	rcall	.-46     	; 0x266 <oledSendCommand>
+     294:	87 e0       	ldi	r24, 0x07	; 7
+     296:	e7 df       	rcall	.-50     	; 0x266 <oledSendCommand>
+     298:	8c e3       	ldi	r24, 0x3C	; 60
+     29a:	c7 df       	rcall	.-114    	; 0x22a <oledSendStart>
+     29c:	80 e4       	ldi	r24, 0x40	; 64
+     29e:	cd df       	rcall	.-102    	; 0x23a <i2c_tx_byte>
+     2a0:	c0 e0       	ldi	r28, 0x00	; 0
+     2a2:	d4 e0       	ldi	r29, 0x04	; 4
+     2a4:	80 e0       	ldi	r24, 0x00	; 0
+     2a6:	c9 df       	rcall	.-110    	; 0x23a <i2c_tx_byte>
+     2a8:	21 97       	sbiw	r28, 0x01	; 1
+     2aa:	e1 f7       	brne	.-8      	; 0x2a4 <OLED_Clear+0x28>
+     2ac:	81 e2       	ldi	r24, 0x21	; 33
+     2ae:	db df       	rcall	.-74     	; 0x266 <oledSendCommand>
+     2b0:	80 e0       	ldi	r24, 0x00	; 0
+     2b2:	d9 df       	rcall	.-78     	; 0x266 <oledSendCommand>
+     2b4:	8f e7       	ldi	r24, 0x7F	; 127
+     2b6:	d7 df       	rcall	.-82     	; 0x266 <oledSendCommand>
+     2b8:	82 e2       	ldi	r24, 0x22	; 34
+     2ba:	d5 df       	rcall	.-86     	; 0x266 <oledSendCommand>
+     2bc:	80 e0       	ldi	r24, 0x00	; 0
+     2be:	d3 df       	rcall	.-90     	; 0x266 <oledSendCommand>
+     2c0:	87 e0       	ldi	r24, 0x07	; 7
+     2c2:	d1 df       	rcall	.-94     	; 0x266 <oledSendCommand>
+     2c4:	8c e3       	ldi	r24, 0x3C	; 60
+     2c6:	b1 df       	rcall	.-158    	; 0x22a <oledSendStart>
+     2c8:	80 e4       	ldi	r24, 0x40	; 64
+     2ca:	b7 df       	rcall	.-146    	; 0x23a <i2c_tx_byte>
+     2cc:	df 91       	pop	r29
+     2ce:	cf 91       	pop	r28
+     2d0:	08 95       	ret
+
+000002d2 <OLED_Init>:
+     2d2:	6d df       	rcall	.-294    	; 0x1ae <i2c_init>
+     2d4:	8e ea       	ldi	r24, 0xAE	; 174
+     2d6:	c7 df       	rcall	.-114    	; 0x266 <oledSendCommand>
+     2d8:	85 ed       	ldi	r24, 0xD5	; 213
+     2da:	c5 df       	rcall	.-118    	; 0x266 <oledSendCommand>
+     2dc:	80 e8       	ldi	r24, 0x80	; 128
+     2de:	c3 df       	rcall	.-122    	; 0x266 <oledSendCommand>
+     2e0:	88 ea       	ldi	r24, 0xA8	; 168
+     2e2:	c1 df       	rcall	.-126    	; 0x266 <oledSendCommand>
+     2e4:	8f e3       	ldi	r24, 0x3F	; 63
+     2e6:	bf df       	rcall	.-130    	; 0x266 <oledSendCommand>
+     2e8:	83 ed       	ldi	r24, 0xD3	; 211
+     2ea:	bd df       	rcall	.-134    	; 0x266 <oledSendCommand>
+     2ec:	80 e0       	ldi	r24, 0x00	; 0
+     2ee:	bb df       	rcall	.-138    	; 0x266 <oledSendCommand>
+     2f0:	80 e4       	ldi	r24, 0x40	; 64
+     2f2:	b9 df       	rcall	.-142    	; 0x266 <oledSendCommand>
+     2f4:	8d e8       	ldi	r24, 0x8D	; 141
+     2f6:	b7 df       	rcall	.-146    	; 0x266 <oledSendCommand>
+     2f8:	84 e1       	ldi	r24, 0x14	; 20
+     2fa:	b5 df       	rcall	.-150    	; 0x266 <oledSendCommand>
+     2fc:	80 e2       	ldi	r24, 0x20	; 32
+     2fe:	b3 df       	rcall	.-154    	; 0x266 <oledSendCommand>
+     300:	80 e0       	ldi	r24, 0x00	; 0
+     302:	b1 df       	rcall	.-158    	; 0x266 <oledSendCommand>
+     304:	81 ea       	ldi	r24, 0xA1	; 161
+     306:	af df       	rcall	.-162    	; 0x266 <oledSendCommand>
+     308:	88 ec       	ldi	r24, 0xC8	; 200
+     30a:	ad df       	rcall	.-166    	; 0x266 <oledSendCommand>
+     30c:	8a ed       	ldi	r24, 0xDA	; 218
+     30e:	ab df       	rcall	.-170    	; 0x266 <oledSendCommand>
+     310:	82 e1       	ldi	r24, 0x12	; 18
+     312:	a9 df       	rcall	.-174    	; 0x266 <oledSendCommand>
+     314:	81 e8       	ldi	r24, 0x81	; 129
+     316:	a7 df       	rcall	.-178    	; 0x266 <oledSendCommand>
+     318:	8f ec       	ldi	r24, 0xCF	; 207
+     31a:	a5 df       	rcall	.-182    	; 0x266 <oledSendCommand>
+     31c:	89 ed       	ldi	r24, 0xD9	; 217
+     31e:	a3 df       	rcall	.-186    	; 0x266 <oledSendCommand>
+     320:	81 ef       	ldi	r24, 0xF1	; 241
+     322:	a1 df       	rcall	.-190    	; 0x266 <oledSendCommand>
+     324:	8b ed       	ldi	r24, 0xDB	; 219
+     326:	9f df       	rcall	.-194    	; 0x266 <oledSendCommand>
+     328:	80 e4       	ldi	r24, 0x40	; 64
+     32a:	9d df       	rcall	.-198    	; 0x266 <oledSendCommand>
+     32c:	84 ea       	ldi	r24, 0xA4	; 164
+     32e:	9b df       	rcall	.-202    	; 0x266 <oledSendCommand>
+     330:	86 ea       	ldi	r24, 0xA6	; 166
+     332:	99 df       	rcall	.-206    	; 0x266 <oledSendCommand>
+     334:	8f ea       	ldi	r24, 0xAF	; 175
+     336:	97 df       	rcall	.-210    	; 0x266 <oledSendCommand>
+     338:	a1 df       	rcall	.-190    	; 0x27c <OLED_Clear>
+     33a:	08 95       	ret
+
+0000033c <OLED_SetCursor>:
+     33c:	cf 93       	push	r28
+     33e:	df 93       	push	r29
+     340:	88 30       	cpi	r24, 0x08	; 8
+     342:	c0 f4       	brcc	.+48     	; 0x374 <OLED_SetCursor+0x38>
+     344:	66 23       	and	r22, r22
+     346:	b4 f0       	brlt	.+44     	; 0x374 <OLED_SetCursor+0x38>
+     348:	d6 2f       	mov	r29, r22
+     34a:	c8 2f       	mov	r28, r24
+     34c:	80 93 74 02 	sts	0x0274, r24	; 0x800274 <OledLineNum>
+     350:	60 93 75 02 	sts	0x0275, r22	; 0x800275 <OledCursorPos>
+     354:	81 e2       	ldi	r24, 0x21	; 33
+     356:	87 df       	rcall	.-242    	; 0x266 <oledSendCommand>
+     358:	8d 2f       	mov	r24, r29
+     35a:	85 df       	rcall	.-246    	; 0x266 <oledSendCommand>
+     35c:	8f e7       	ldi	r24, 0x7F	; 127
+     35e:	83 df       	rcall	.-250    	; 0x266 <oledSendCommand>
+     360:	82 e2       	ldi	r24, 0x22	; 34
+     362:	81 df       	rcall	.-254    	; 0x266 <oledSendCommand>
+     364:	8c 2f       	mov	r24, r28
+     366:	7f df       	rcall	.-258    	; 0x266 <oledSendCommand>
+     368:	87 e0       	ldi	r24, 0x07	; 7
+     36a:	7d df       	rcall	.-262    	; 0x266 <oledSendCommand>
+     36c:	8c e3       	ldi	r24, 0x3C	; 60
+     36e:	5d df       	rcall	.-326    	; 0x22a <oledSendStart>
+     370:	80 e4       	ldi	r24, 0x40	; 64
+     372:	63 df       	rcall	.-314    	; 0x23a <i2c_tx_byte>
+     374:	df 91       	pop	r29
+     376:	cf 91       	pop	r28
+     378:	08 95       	ret
+
+0000037a <OLED_GoToNextLine>:
+     37a:	80 91 74 02 	lds	r24, 0x0274	; 0x800274 <OledLineNum>
+     37e:	8f 5f       	subi	r24, 0xFF	; 255
+     380:	87 70       	andi	r24, 0x07	; 7
+     382:	80 93 74 02 	sts	0x0274, r24	; 0x800274 <OledLineNum>
+     386:	60 e0       	ldi	r22, 0x00	; 0
+     388:	d9 df       	rcall	.-78     	; 0x33c <OLED_SetCursor>
+     38a:	08 95       	ret
+
+0000038c <OLED_DisplayChar>:
+     38c:	1f 93       	push	r17
+     38e:	cf 93       	push	r28
+     390:	df 93       	push	r29
+     392:	c8 2f       	mov	r28, r24
+     394:	80 91 75 02 	lds	r24, 0x0275	; 0x800275 <OledCursorPos>
+     398:	90 e0       	ldi	r25, 0x00	; 0
+     39a:	05 96       	adiw	r24, 0x05	; 5
+     39c:	80 38       	cpi	r24, 0x80	; 128
+     39e:	91 05       	cpc	r25, r1
+     3a0:	1c f4       	brge	.+6      	; 0x3a8 <OLED_DisplayChar+0x1c>
+     3a2:	ca 30       	cpi	r28, 0x0A	; 10
+     3a4:	21 f4       	brne	.+8      	; 0x3ae <OLED_DisplayChar+0x22>
+     3a6:	21 c0       	rjmp	.+66     	; 0x3ea <OLED_DisplayChar+0x5e>
+     3a8:	e8 df       	rcall	.-48     	; 0x37a <OLED_GoToNextLine>
+     3aa:	ca 30       	cpi	r28, 0x0A	; 10
+     3ac:	f9 f0       	breq	.+62     	; 0x3ec <OLED_DisplayChar+0x60>
+     3ae:	c0 52       	subi	r28, 0x20	; 32
+     3b0:	d0 e0       	ldi	r29, 0x00	; 0
+     3b2:	ce 01       	movw	r24, r28
+     3b4:	88 0f       	add	r24, r24
+     3b6:	99 1f       	adc	r25, r25
+     3b8:	88 0f       	add	r24, r24
+     3ba:	99 1f       	adc	r25, r25
+     3bc:	c8 0f       	add	r28, r24
+     3be:	d9 1f       	adc	r29, r25
+     3c0:	ca 57       	subi	r28, 0x7A	; 122
+     3c2:	df 4f       	sbci	r29, 0xFF	; 255
+     3c4:	10 e0       	ldi	r17, 0x00	; 0
+     3c6:	89 91       	ld	r24, Y+
+     3c8:	38 df       	rcall	.-400    	; 0x23a <i2c_tx_byte>
+     3ca:	80 91 75 02 	lds	r24, 0x0275	; 0x800275 <OledCursorPos>
+     3ce:	8f 5f       	subi	r24, 0xFF	; 255
+     3d0:	80 93 75 02 	sts	0x0275, r24	; 0x800275 <OledCursorPos>
+     3d4:	1f 5f       	subi	r17, 0xFF	; 255
+     3d6:	15 30       	cpi	r17, 0x05	; 5
+     3d8:	b1 f7       	brne	.-20     	; 0x3c6 <OLED_DisplayChar+0x3a>
+     3da:	80 e0       	ldi	r24, 0x00	; 0
+     3dc:	2e df       	rcall	.-420    	; 0x23a <i2c_tx_byte>
+     3de:	80 91 75 02 	lds	r24, 0x0275	; 0x800275 <OledCursorPos>
+     3e2:	8f 5f       	subi	r24, 0xFF	; 255
+     3e4:	80 93 75 02 	sts	0x0275, r24	; 0x800275 <OledCursorPos>
+     3e8:	01 c0       	rjmp	.+2      	; 0x3ec <OLED_DisplayChar+0x60>
+     3ea:	c7 df       	rcall	.-114    	; 0x37a <OLED_GoToNextLine>
+     3ec:	df 91       	pop	r29
+     3ee:	cf 91       	pop	r28
+     3f0:	1f 91       	pop	r17
+     3f2:	08 95       	ret
+
+000003f4 <OLED_DisplayString>:
+     3f4:	cf 93       	push	r28
+     3f6:	df 93       	push	r29
+     3f8:	ec 01       	movw	r28, r24
+     3fa:	88 81       	ld	r24, Y
+     3fc:	88 23       	and	r24, r24
+     3fe:	29 f0       	breq	.+10     	; 0x40a <__FUSE_REGION_LENGTH__+0xa>
+     400:	21 96       	adiw	r28, 0x01	; 1
+     402:	c4 df       	rcall	.-120    	; 0x38c <OLED_DisplayChar>
+     404:	89 91       	ld	r24, Y+
+     406:	81 11       	cpse	r24, r1
+     408:	fc cf       	rjmp	.-8      	; 0x402 <__FUSE_REGION_LENGTH__+0x2>
+     40a:	df 91       	pop	r29
+     40c:	cf 91       	pop	r28
+     40e:	08 95       	ret
+
+00000410 <OLED_DisplayNumber>:
+     410:	4f 92       	push	r4
+     412:	5f 92       	push	r5
+     414:	6f 92       	push	r6
+     416:	7f 92       	push	r7
+     418:	8f 92       	push	r8
+     41a:	9f 92       	push	r9
+     41c:	af 92       	push	r10
+     41e:	bf 92       	push	r11
+     420:	cf 92       	push	r12
+     422:	df 92       	push	r13
+     424:	ef 92       	push	r14
+     426:	ff 92       	push	r15
+     428:	0f 93       	push	r16
+     42a:	1f 93       	push	r17
+     42c:	cf 93       	push	r28
+     42e:	df 93       	push	r29
+     430:	cd b7       	in	r28, 0x3d	; 61
+     432:	de b7       	in	r29, 0x3e	; 62
+     434:	2a 97       	sbiw	r28, 0x0a	; 10
+     436:	0f b6       	in	r0, 0x3f	; 63
+     438:	f8 94       	cli
+     43a:	de bf       	out	0x3e, r29	; 62
+     43c:	0f be       	out	0x3f, r0	; 63
+     43e:	cd bf       	out	0x3d, r28	; 61
+     440:	88 2e       	mov	r8, r24
+     442:	6a 01       	movw	r12, r20
+     444:	7b 01       	movw	r14, r22
+     446:	12 2f       	mov	r17, r18
+     448:	82 e0       	ldi	r24, 0x02	; 2
+     44a:	88 12       	cpse	r8, r24
+     44c:	23 c0       	rjmp	.+70     	; 0x494 <__stack+0x35>
+     44e:	22 23       	and	r18, r18
+     450:	09 f4       	brne	.+2      	; 0x454 <OLED_DisplayNumber+0x44>
+     452:	6a c0       	rjmp	.+212    	; 0x528 <__stack+0xc9>
+     454:	aa 24       	eor	r10, r10
+     456:	a3 94       	inc	r10
+     458:	b1 2c       	mov	r11, r1
+     45a:	01 e0       	ldi	r16, 0x01	; 1
+     45c:	91 2c       	mov	r9, r1
+     45e:	8f ef       	ldi	r24, 0xFF	; 255
+     460:	81 0f       	add	r24, r17
+     462:	a5 01       	movw	r20, r10
+     464:	02 c0       	rjmp	.+4      	; 0x46a <__stack+0xb>
+     466:	44 0f       	add	r20, r20
+     468:	55 1f       	adc	r21, r21
+     46a:	8a 95       	dec	r24
+     46c:	e2 f7       	brpl	.-8      	; 0x466 <__stack+0x7>
+     46e:	05 2e       	mov	r0, r21
+     470:	00 0c       	add	r0, r0
+     472:	66 0b       	sbc	r22, r22
+     474:	77 0b       	sbc	r23, r23
+     476:	4c 21       	and	r20, r12
+     478:	5d 21       	and	r21, r13
+     47a:	6e 21       	and	r22, r14
+     47c:	7f 21       	and	r23, r15
+     47e:	80 2f       	mov	r24, r16
+     480:	45 2b       	or	r20, r21
+     482:	46 2b       	or	r20, r22
+     484:	47 2b       	or	r20, r23
+     486:	09 f4       	brne	.+2      	; 0x48a <__stack+0x2b>
+     488:	89 2d       	mov	r24, r9
+     48a:	80 5d       	subi	r24, 0xD0	; 208
+     48c:	7f df       	rcall	.-258    	; 0x38c <OLED_DisplayChar>
+     48e:	11 50       	subi	r17, 0x01	; 1
+     490:	31 f7       	brne	.-52     	; 0x45e <OLED_DisplayNumber+0x4e>
+     492:	4a c0       	rjmp	.+148    	; 0x528 <__stack+0xc9>
+     494:	45 2b       	or	r20, r21
+     496:	46 2b       	or	r20, r22
+     498:	47 2b       	or	r20, r23
+     49a:	19 f0       	breq	.+6      	; 0x4a2 <__stack+0x43>
+     49c:	21 11       	cpse	r18, r1
+     49e:	0d c0       	rjmp	.+26     	; 0x4ba <__stack+0x5b>
+     4a0:	43 c0       	rjmp	.+134    	; 0x528 <__stack+0xc9>
+     4a2:	22 23       	and	r18, r18
+     4a4:	09 f4       	brne	.+2      	; 0x4a8 <__stack+0x49>
+     4a6:	40 c0       	rjmp	.+128    	; 0x528 <__stack+0xc9>
+     4a8:	00 e0       	ldi	r16, 0x00	; 0
+     4aa:	80 e3       	ldi	r24, 0x30	; 48
+     4ac:	6f df       	rcall	.-290    	; 0x38c <OLED_DisplayChar>
+     4ae:	0f 5f       	subi	r16, 0xFF	; 255
+     4b0:	01 17       	cp	r16, r17
+     4b2:	d1 f1       	breq	.+116    	; 0x528 <__stack+0xc9>
+     4b4:	0a 30       	cpi	r16, 0x0A	; 10
+     4b6:	c9 f7       	brne	.-14     	; 0x4aa <__stack+0x4b>
+     4b8:	37 c0       	rjmp	.+110    	; 0x528 <__stack+0xc9>
+     4ba:	fe 01       	movw	r30, r28
+     4bc:	31 96       	adiw	r30, 0x01	; 1
+     4be:	5f 01       	movw	r10, r30
+     4c0:	00 e0       	ldi	r16, 0x00	; 0
+     4c2:	48 2c       	mov	r4, r8
+     4c4:	51 2c       	mov	r5, r1
+     4c6:	61 2c       	mov	r6, r1
+     4c8:	71 2c       	mov	r7, r1
+     4ca:	c1 14       	cp	r12, r1
+     4cc:	d1 04       	cpc	r13, r1
+     4ce:	e1 04       	cpc	r14, r1
+     4d0:	f1 04       	cpc	r15, r1
+     4d2:	81 f0       	breq	.+32     	; 0x4f4 <__stack+0x95>
+     4d4:	9c 2c       	mov	r9, r12
+     4d6:	c7 01       	movw	r24, r14
+     4d8:	b6 01       	movw	r22, r12
+     4da:	a3 01       	movw	r20, r6
+     4dc:	92 01       	movw	r18, r4
+     4de:	13 d6       	rcall	.+3110   	; 0x1106 <__udivmodsi4>
+     4e0:	c2 2e       	mov	r12, r18
+     4e2:	d3 2e       	mov	r13, r19
+     4e4:	e4 2e       	mov	r14, r20
+     4e6:	f5 2e       	mov	r15, r21
+     4e8:	82 9e       	mul	r8, r18
+     4ea:	90 18       	sub	r9, r0
+     4ec:	11 24       	eor	r1, r1
+     4ee:	f5 01       	movw	r30, r10
+     4f0:	90 82       	st	Z, r9
+     4f2:	08 c0       	rjmp	.+16     	; 0x504 <__stack+0xa5>
+     4f4:	1b 30       	cpi	r17, 0x0B	; 11
+     4f6:	20 f0       	brcs	.+8      	; 0x500 <__stack+0xa1>
+     4f8:	10 2f       	mov	r17, r16
+     4fa:	01 11       	cpse	r16, r1
+     4fc:	09 c0       	rjmp	.+18     	; 0x510 <__stack+0xb1>
+     4fe:	14 c0       	rjmp	.+40     	; 0x528 <__stack+0xc9>
+     500:	f5 01       	movw	r30, r10
+     502:	10 82       	st	Z, r1
+     504:	0f 5f       	subi	r16, 0xFF	; 255
+     506:	ff ef       	ldi	r31, 0xFF	; 255
+     508:	af 1a       	sub	r10, r31
+     50a:	bf 0a       	sbc	r11, r31
+     50c:	01 13       	cpse	r16, r17
+     50e:	dd cf       	rjmp	.-70     	; 0x4ca <__stack+0x6b>
+     510:	fe 01       	movw	r30, r28
+     512:	e1 0f       	add	r30, r17
+     514:	f1 1d       	adc	r31, r1
+     516:	80 81       	ld	r24, Z
+     518:	8a 30       	cpi	r24, 0x0A	; 10
+     51a:	10 f0       	brcs	.+4      	; 0x520 <__stack+0xc1>
+     51c:	89 5c       	subi	r24, 0xC9	; 201
+     51e:	01 c0       	rjmp	.+2      	; 0x522 <__stack+0xc3>
+     520:	80 5d       	subi	r24, 0xD0	; 208
+     522:	34 df       	rcall	.-408    	; 0x38c <OLED_DisplayChar>
+     524:	11 50       	subi	r17, 0x01	; 1
+     526:	a1 f7       	brne	.-24     	; 0x510 <__stack+0xb1>
+     528:	2a 96       	adiw	r28, 0x0a	; 10
+     52a:	0f b6       	in	r0, 0x3f	; 63
+     52c:	f8 94       	cli
+     52e:	de bf       	out	0x3e, r29	; 62
+     530:	0f be       	out	0x3f, r0	; 63
+     532:	cd bf       	out	0x3d, r28	; 61
+     534:	df 91       	pop	r29
+     536:	cf 91       	pop	r28
+     538:	1f 91       	pop	r17
+     53a:	0f 91       	pop	r16
+     53c:	ff 90       	pop	r15
+     53e:	ef 90       	pop	r14
+     540:	df 90       	pop	r13
+     542:	cf 90       	pop	r12
+     544:	bf 90       	pop	r11
+     546:	af 90       	pop	r10
+     548:	9f 90       	pop	r9
+     54a:	8f 90       	pop	r8
+     54c:	7f 90       	pop	r7
+     54e:	6f 90       	pop	r6
+     550:	5f 90       	pop	r5
+     552:	4f 90       	pop	r4
+     554:	08 95       	ret
+
+00000556 <OLED_DisplayFloatNumber>:
+     556:	8f 92       	push	r8
+     558:	9f 92       	push	r9
+     55a:	af 92       	push	r10
+     55c:	bf 92       	push	r11
+     55e:	cf 92       	push	r12
+     560:	df 92       	push	r13
+     562:	ef 92       	push	r14
+     564:	ff 92       	push	r15
+     566:	6b 01       	movw	r12, r22
+     568:	7c 01       	movw	r14, r24
+     56a:	9d d4       	rcall	.+2362   	; 0xea6 <__fixunssfsi>
+     56c:	4b 01       	movw	r8, r22
+     56e:	5c 01       	movw	r10, r24
+     570:	2f ef       	ldi	r18, 0xFF	; 255
+     572:	ab 01       	movw	r20, r22
+     574:	bc 01       	movw	r22, r24
+     576:	8a e0       	ldi	r24, 0x0A	; 10
+     578:	4b df       	rcall	.-362    	; 0x410 <OLED_DisplayNumber>
+     57a:	8e e2       	ldi	r24, 0x2E	; 46
+     57c:	07 df       	rcall	.-498    	; 0x38c <OLED_DisplayChar>
+     57e:	c5 01       	movw	r24, r10
+     580:	b4 01       	movw	r22, r8
+     582:	bd d4       	rcall	.+2426   	; 0xefe <__floatunsisf>
+     584:	9b 01       	movw	r18, r22
+     586:	ac 01       	movw	r20, r24
+     588:	c7 01       	movw	r24, r14
+     58a:	b6 01       	movw	r22, r12
+     58c:	27 d4       	rcall	.+2126   	; 0xddc <__subsf3>
+     58e:	20 e0       	ldi	r18, 0x00	; 0
+     590:	34 e2       	ldi	r19, 0x24	; 36
+     592:	44 e7       	ldi	r20, 0x74	; 116
+     594:	59 e4       	ldi	r21, 0x49	; 73
+     596:	41 d5       	rcall	.+2690   	; 0x101a <__mulsf3>
+     598:	86 d4       	rcall	.+2316   	; 0xea6 <__fixunssfsi>
+     59a:	ab 01       	movw	r20, r22
+     59c:	bc 01       	movw	r22, r24
+     59e:	2f ef       	ldi	r18, 0xFF	; 255
+     5a0:	8a e0       	ldi	r24, 0x0A	; 10
+     5a2:	36 df       	rcall	.-404    	; 0x410 <OLED_DisplayNumber>
+     5a4:	ff 90       	pop	r15
+     5a6:	ef 90       	pop	r14
+     5a8:	df 90       	pop	r13
+     5aa:	cf 90       	pop	r12
+     5ac:	bf 90       	pop	r11
+     5ae:	af 90       	pop	r10
+     5b0:	9f 90       	pop	r9
+     5b2:	8f 90       	pop	r8
+     5b4:	08 95       	ret
+
+000005b6 <OLED_Printf>:
+     5b6:	4f 92       	push	r4
+     5b8:	5f 92       	push	r5
+     5ba:	6f 92       	push	r6
+     5bc:	7f 92       	push	r7
+     5be:	8f 92       	push	r8
+     5c0:	9f 92       	push	r9
+     5c2:	af 92       	push	r10
+     5c4:	bf 92       	push	r11
+     5c6:	cf 92       	push	r12
+     5c8:	df 92       	push	r13
+     5ca:	ef 92       	push	r14
+     5cc:	ff 92       	push	r15
+     5ce:	0f 93       	push	r16
+     5d0:	1f 93       	push	r17
+     5d2:	cf 93       	push	r28
+     5d4:	df 93       	push	r29
+     5d6:	cd b7       	in	r28, 0x3d	; 61
+     5d8:	de b7       	in	r29, 0x3e	; 62
+     5da:	fe 01       	movw	r30, r28
+     5dc:	73 96       	adiw	r30, 0x13	; 19
+     5de:	81 90       	ld	r8, Z+
+     5e0:	91 90       	ld	r9, Z+
+     5e2:	7f 01       	movw	r14, r30
+     5e4:	d4 01       	movw	r26, r8
+     5e6:	8c 91       	ld	r24, X
+     5e8:	88 23       	and	r24, r24
+     5ea:	09 f4       	brne	.+2      	; 0x5ee <OLED_Printf+0x38>
+     5ec:	f5 c0       	rjmp	.+490    	; 0x7d8 <OLED_Printf+0x222>
+     5ee:	68 94       	set
+     5f0:	aa 24       	eor	r10, r10
+     5f2:	a4 f8       	bld	r10, 4
+     5f4:	bb 24       	eor	r11, r11
+     5f6:	ba 94       	dec	r11
+     5f8:	00 e0       	ldi	r16, 0x00	; 0
+     5fa:	85 32       	cpi	r24, 0x25	; 37
+     5fc:	09 f0       	breq	.+2      	; 0x600 <OLED_Printf+0x4a>
+     5fe:	cd c0       	rjmp	.+410    	; 0x79a <OLED_Printf+0x1e4>
+     600:	64 01       	movw	r12, r8
+     602:	bf ef       	ldi	r27, 0xFF	; 255
+     604:	cb 1a       	sub	r12, r27
+     606:	db 0a       	sbc	r13, r27
+     608:	d4 01       	movw	r26, r8
+     60a:	11 96       	adiw	r26, 0x01	; 1
+     60c:	ec 91       	ld	r30, X
+     60e:	11 97       	sbiw	r26, 0x01	; 1
+     610:	80 ed       	ldi	r24, 0xD0	; 208
+     612:	8e 0f       	add	r24, r30
+     614:	8a 30       	cpi	r24, 0x0A	; 10
+     616:	08 f0       	brcs	.+2      	; 0x61a <OLED_Printf+0x64>
+     618:	d5 c0       	rjmp	.+426    	; 0x7c4 <OLED_Printf+0x20e>
+     61a:	12 96       	adiw	r26, 0x02	; 2
+     61c:	10 2f       	mov	r17, r16
+     61e:	21 2f       	mov	r18, r17
+     620:	22 0f       	add	r18, r18
+     622:	92 2f       	mov	r25, r18
+     624:	99 0f       	add	r25, r25
+     626:	99 0f       	add	r25, r25
+     628:	29 0f       	add	r18, r25
+     62a:	20 53       	subi	r18, 0x30	; 48
+     62c:	12 2f       	mov	r17, r18
+     62e:	1e 0f       	add	r17, r30
+     630:	6d 01       	movw	r12, r26
+     632:	ed 91       	ld	r30, X+
+     634:	80 ed       	ldi	r24, 0xD0	; 208
+     636:	8e 0f       	add	r24, r30
+     638:	8a 30       	cpi	r24, 0x0A	; 10
+     63a:	88 f3       	brcs	.-30     	; 0x61e <OLED_Printf+0x68>
+     63c:	4e 2f       	mov	r20, r30
+     63e:	50 e0       	ldi	r21, 0x00	; 0
+     640:	fa 01       	movw	r30, r20
+     642:	b5 97       	sbiw	r30, 0x25	; 37
+     644:	e4 35       	cpi	r30, 0x54	; 84
+     646:	f1 05       	cpc	r31, r1
+     648:	08 f0       	brcs	.+2      	; 0x64c <OLED_Printf+0x96>
+     64a:	a9 c0       	rjmp	.+338    	; 0x79e <OLED_Printf+0x1e8>
+     64c:	ed 5e       	subi	r30, 0xED	; 237
+     64e:	ff 4f       	sbci	r31, 0xFF	; 255
+     650:	09 94       	ijmp
+     652:	47 01       	movw	r8, r14
+     654:	b2 e0       	ldi	r27, 0x02	; 2
+     656:	8b 0e       	add	r8, r27
+     658:	91 1c       	adc	r9, r1
+     65a:	f7 01       	movw	r30, r14
+     65c:	80 81       	ld	r24, Z
+     65e:	96 de       	rcall	.-724    	; 0x38c <OLED_DisplayChar>
+     660:	74 01       	movw	r14, r8
+     662:	9d c0       	rjmp	.+314    	; 0x79e <OLED_Printf+0x1e8>
+     664:	1b 2d       	mov	r17, r11
+     666:	f7 01       	movw	r30, r14
+     668:	80 80       	ld	r8, Z
+     66a:	91 80       	ldd	r9, Z+1	; 0x01
+     66c:	f2 e0       	ldi	r31, 0x02	; 2
+     66e:	ef 0e       	add	r14, r31
+     670:	f1 1c       	adc	r15, r1
+     672:	99 20       	and	r9, r9
+     674:	2c f4       	brge	.+10     	; 0x680 <OLED_Printf+0xca>
+     676:	91 94       	neg	r9
+     678:	81 94       	neg	r8
+     67a:	91 08       	sbc	r9, r1
+     67c:	8d e2       	ldi	r24, 0x2D	; 45
+     67e:	86 de       	rcall	.-756    	; 0x38c <OLED_DisplayChar>
+     680:	a4 01       	movw	r20, r8
+     682:	99 0c       	add	r9, r9
+     684:	66 0b       	sbc	r22, r22
+     686:	77 0b       	sbc	r23, r23
+     688:	21 2f       	mov	r18, r17
+     68a:	8a e0       	ldi	r24, 0x0A	; 10
+     68c:	c1 de       	rcall	.-638    	; 0x410 <OLED_DisplayNumber>
+     68e:	87 c0       	rjmp	.+270    	; 0x79e <OLED_Printf+0x1e8>
+     690:	1b 2d       	mov	r17, r11
+     692:	f7 01       	movw	r30, r14
+     694:	40 80       	ld	r4, Z
+     696:	51 80       	ldd	r5, Z+1	; 0x01
+     698:	62 80       	ldd	r6, Z+2	; 0x02
+     69a:	73 80       	ldd	r7, Z+3	; 0x03
+     69c:	24 e0       	ldi	r18, 0x04	; 4
+     69e:	e2 0e       	add	r14, r18
+     6a0:	f1 1c       	adc	r15, r1
+     6a2:	77 20       	and	r7, r7
+     6a4:	54 f4       	brge	.+20     	; 0x6ba <OLED_Printf+0x104>
+     6a6:	70 94       	com	r7
+     6a8:	60 94       	com	r6
+     6aa:	50 94       	com	r5
+     6ac:	40 94       	com	r4
+     6ae:	41 1c       	adc	r4, r1
+     6b0:	51 1c       	adc	r5, r1
+     6b2:	61 1c       	adc	r6, r1
+     6b4:	71 1c       	adc	r7, r1
+     6b6:	8d e2       	ldi	r24, 0x2D	; 45
+     6b8:	69 de       	rcall	.-814    	; 0x38c <OLED_DisplayChar>
+     6ba:	21 2f       	mov	r18, r17
+     6bc:	b3 01       	movw	r22, r6
+     6be:	a2 01       	movw	r20, r4
+     6c0:	8a e0       	ldi	r24, 0x0A	; 10
+     6c2:	a6 de       	rcall	.-692    	; 0x410 <OLED_DisplayNumber>
+     6c4:	6c c0       	rjmp	.+216    	; 0x79e <OLED_Printf+0x1e8>
+     6c6:	1b 2d       	mov	r17, r11
+     6c8:	f7 01       	movw	r30, r14
+     6ca:	40 81       	ld	r20, Z
+     6cc:	51 81       	ldd	r21, Z+1	; 0x01
+     6ce:	82 e0       	ldi	r24, 0x02	; 2
+     6d0:	e8 0e       	add	r14, r24
+     6d2:	f1 1c       	adc	r15, r1
+     6d4:	60 e0       	ldi	r22, 0x00	; 0
+     6d6:	70 e0       	ldi	r23, 0x00	; 0
+     6d8:	21 2f       	mov	r18, r17
+     6da:	8a e0       	ldi	r24, 0x0A	; 10
+     6dc:	99 de       	rcall	.-718    	; 0x410 <OLED_DisplayNumber>
+     6de:	5f c0       	rjmp	.+190    	; 0x79e <OLED_Printf+0x1e8>
+     6e0:	1b 2d       	mov	r17, r11
+     6e2:	f7 01       	movw	r30, r14
+     6e4:	40 81       	ld	r20, Z
+     6e6:	51 81       	ldd	r21, Z+1	; 0x01
+     6e8:	62 81       	ldd	r22, Z+2	; 0x02
+     6ea:	73 81       	ldd	r23, Z+3	; 0x03
+     6ec:	94 e0       	ldi	r25, 0x04	; 4
+     6ee:	e9 0e       	add	r14, r25
+     6f0:	f1 1c       	adc	r15, r1
+     6f2:	21 2f       	mov	r18, r17
+     6f4:	8a e0       	ldi	r24, 0x0A	; 10
+     6f6:	8c de       	rcall	.-744    	; 0x410 <OLED_DisplayNumber>
+     6f8:	52 c0       	rjmp	.+164    	; 0x79e <OLED_Printf+0x1e8>
+     6fa:	1b 2d       	mov	r17, r11
+     6fc:	f7 01       	movw	r30, r14
+     6fe:	40 81       	ld	r20, Z
+     700:	51 81       	ldd	r21, Z+1	; 0x01
+     702:	a2 e0       	ldi	r26, 0x02	; 2
+     704:	ea 0e       	add	r14, r26
+     706:	f1 1c       	adc	r15, r1
+     708:	60 e0       	ldi	r22, 0x00	; 0
+     70a:	70 e0       	ldi	r23, 0x00	; 0
+     70c:	21 2f       	mov	r18, r17
+     70e:	8a 2d       	mov	r24, r10
+     710:	7f de       	rcall	.-770    	; 0x410 <OLED_DisplayNumber>
+     712:	45 c0       	rjmp	.+138    	; 0x79e <OLED_Printf+0x1e8>
+     714:	1b 2d       	mov	r17, r11
+     716:	f7 01       	movw	r30, r14
+     718:	40 81       	ld	r20, Z
+     71a:	51 81       	ldd	r21, Z+1	; 0x01
+     71c:	62 81       	ldd	r22, Z+2	; 0x02
+     71e:	73 81       	ldd	r23, Z+3	; 0x03
+     720:	b4 e0       	ldi	r27, 0x04	; 4
+     722:	eb 0e       	add	r14, r27
+     724:	f1 1c       	adc	r15, r1
+     726:	21 2f       	mov	r18, r17
+     728:	8a 2d       	mov	r24, r10
+     72a:	72 de       	rcall	.-796    	; 0x410 <OLED_DisplayNumber>
+     72c:	38 c0       	rjmp	.+112    	; 0x79e <OLED_Printf+0x1e8>
+     72e:	1b 2d       	mov	r17, r11
+     730:	f7 01       	movw	r30, r14
+     732:	40 81       	ld	r20, Z
+     734:	51 81       	ldd	r21, Z+1	; 0x01
+     736:	e2 e0       	ldi	r30, 0x02	; 2
+     738:	ee 0e       	add	r14, r30
+     73a:	f1 1c       	adc	r15, r1
+     73c:	1f 3f       	cpi	r17, 0xFF	; 255
+     73e:	09 f4       	brne	.+2      	; 0x742 <OLED_Printf+0x18c>
+     740:	1a 2d       	mov	r17, r10
+     742:	60 e0       	ldi	r22, 0x00	; 0
+     744:	70 e0       	ldi	r23, 0x00	; 0
+     746:	21 2f       	mov	r18, r17
+     748:	82 e0       	ldi	r24, 0x02	; 2
+     74a:	62 de       	rcall	.-828    	; 0x410 <OLED_DisplayNumber>
+     74c:	28 c0       	rjmp	.+80     	; 0x79e <OLED_Printf+0x1e8>
+     74e:	f7 01       	movw	r30, r14
+     750:	40 81       	ld	r20, Z
+     752:	51 81       	ldd	r21, Z+1	; 0x01
+     754:	62 81       	ldd	r22, Z+2	; 0x02
+     756:	73 81       	ldd	r23, Z+3	; 0x03
+     758:	f4 e0       	ldi	r31, 0x04	; 4
+     75a:	ef 0e       	add	r14, r31
+     75c:	f1 1c       	adc	r15, r1
+     75e:	1f 3f       	cpi	r17, 0xFF	; 255
+     760:	09 f4       	brne	.+2      	; 0x764 <OLED_Printf+0x1ae>
+     762:	1a 2d       	mov	r17, r10
+     764:	21 2f       	mov	r18, r17
+     766:	82 e0       	ldi	r24, 0x02	; 2
+     768:	53 de       	rcall	.-858    	; 0x410 <OLED_DisplayNumber>
+     76a:	19 c0       	rjmp	.+50     	; 0x79e <OLED_Printf+0x1e8>
+     76c:	f7 01       	movw	r30, r14
+     76e:	60 81       	ld	r22, Z
+     770:	71 81       	ldd	r23, Z+1	; 0x01
+     772:	82 81       	ldd	r24, Z+2	; 0x02
+     774:	93 81       	ldd	r25, Z+3	; 0x03
+     776:	24 e0       	ldi	r18, 0x04	; 4
+     778:	e2 0e       	add	r14, r18
+     77a:	f1 1c       	adc	r15, r1
+     77c:	ec de       	rcall	.-552    	; 0x556 <OLED_DisplayFloatNumber>
+     77e:	0f c0       	rjmp	.+30     	; 0x79e <OLED_Printf+0x1e8>
+     780:	47 01       	movw	r8, r14
+     782:	82 e0       	ldi	r24, 0x02	; 2
+     784:	88 0e       	add	r8, r24
+     786:	91 1c       	adc	r9, r1
+     788:	d7 01       	movw	r26, r14
+     78a:	8d 91       	ld	r24, X+
+     78c:	9c 91       	ld	r25, X
+     78e:	32 de       	rcall	.-924    	; 0x3f4 <OLED_DisplayString>
+     790:	74 01       	movw	r14, r8
+     792:	05 c0       	rjmp	.+10     	; 0x79e <OLED_Printf+0x1e8>
+     794:	85 e2       	ldi	r24, 0x25	; 37
+     796:	fa dd       	rcall	.-1036   	; 0x38c <OLED_DisplayChar>
+     798:	02 c0       	rjmp	.+4      	; 0x79e <OLED_Printf+0x1e8>
+     79a:	f8 dd       	rcall	.-1040   	; 0x38c <OLED_DisplayChar>
+     79c:	64 01       	movw	r12, r8
+     79e:	46 01       	movw	r8, r12
+     7a0:	bf ef       	ldi	r27, 0xFF	; 255
+     7a2:	8b 1a       	sub	r8, r27
+     7a4:	9b 0a       	sbc	r9, r27
+     7a6:	f6 01       	movw	r30, r12
+     7a8:	81 81       	ldd	r24, Z+1	; 0x01
+     7aa:	81 11       	cpse	r24, r1
+     7ac:	26 cf       	rjmp	.-436    	; 0x5fa <OLED_Printf+0x44>
+     7ae:	14 c0       	rjmp	.+40     	; 0x7d8 <OLED_Printf+0x222>
+     7b0:	d7 01       	movw	r26, r14
+     7b2:	4d 91       	ld	r20, X+
+     7b4:	5d 91       	ld	r21, X+
+     7b6:	6d 91       	ld	r22, X+
+     7b8:	7c 91       	ld	r23, X
+     7ba:	f7 01       	movw	r30, r14
+     7bc:	34 96       	adiw	r30, 0x04	; 4
+     7be:	7f 01       	movw	r14, r30
+     7c0:	1a 2d       	mov	r17, r10
+     7c2:	d0 cf       	rjmp	.-96     	; 0x764 <OLED_Printf+0x1ae>
+     7c4:	4e 2f       	mov	r20, r30
+     7c6:	50 e0       	ldi	r21, 0x00	; 0
+     7c8:	fa 01       	movw	r30, r20
+     7ca:	b5 97       	sbiw	r30, 0x25	; 37
+     7cc:	e4 35       	cpi	r30, 0x54	; 84
+     7ce:	f1 05       	cpc	r31, r1
+     7d0:	30 f7       	brcc	.-52     	; 0x79e <OLED_Printf+0x1e8>
+     7d2:	e9 59       	subi	r30, 0x99	; 153
+     7d4:	ff 4f       	sbci	r31, 0xFF	; 255
+     7d6:	09 94       	ijmp
+     7d8:	df 91       	pop	r29
+     7da:	cf 91       	pop	r28
+     7dc:	1f 91       	pop	r17
+     7de:	0f 91       	pop	r16
+     7e0:	ff 90       	pop	r15
+     7e2:	ef 90       	pop	r14
+     7e4:	df 90       	pop	r13
+     7e6:	cf 90       	pop	r12
+     7e8:	bf 90       	pop	r11
+     7ea:	af 90       	pop	r10
+     7ec:	9f 90       	pop	r9
+     7ee:	8f 90       	pop	r8
+     7f0:	7f 90       	pop	r7
+     7f2:	6f 90       	pop	r6
+     7f4:	5f 90       	pop	r5
+     7f6:	4f 90       	pop	r4
+     7f8:	08 95       	ret
+
+000007fa <__vector_8>:
+	}
+	return 0;
+}
+
+ISR(TIMER1_OVF_vect)
+{
+     7fa:	1f 92       	push	r1
+     7fc:	0f 92       	push	r0
+     7fe:	0f b6       	in	r0, 0x3f	; 63
+     800:	0f 92       	push	r0
+     802:	11 24       	eor	r1, r1
+     804:	8f 93       	push	r24
+	if(relay1_state==on){
+     806:	80 91 72 02 	lds	r24, 0x0272	; 0x800272 <relay1_state>
+     80a:	81 30       	cpi	r24, 0x01	; 1
+     80c:	29 f4       	brne	.+10     	; 0x818 <__vector_8+0x1e>
+	seconds1++;}
+     80e:	80 91 70 02 	lds	r24, 0x0270	; 0x800270 <seconds1>
+     812:	8f 5f       	subi	r24, 0xFF	; 255
+     814:	80 93 70 02 	sts	0x0270, r24	; 0x800270 <seconds1>
+	if(relay2_state==on){
+     818:	80 91 71 02 	lds	r24, 0x0271	; 0x800271 <relay2_state>
+     81c:	81 30       	cpi	r24, 0x01	; 1
+     81e:	29 f4       	brne	.+10     	; 0x82a <__vector_8+0x30>
+	seconds2++;}
+     820:	80 91 6d 02 	lds	r24, 0x026D	; 0x80026d <seconds2>
+     824:	8f 5f       	subi	r24, 0xFF	; 255
+     826:	80 93 6d 02 	sts	0x026D, r24	; 0x80026d <seconds2>
+	
+	if(seconds1>59)
+     82a:	80 91 70 02 	lds	r24, 0x0270	; 0x800270 <seconds1>
+     82e:	8c 33       	cpi	r24, 0x3C	; 60
+     830:	38 f0       	brcs	.+14     	; 0x840 <__vector_8+0x46>
+	{
+		minutes1++;
+     832:	80 91 6f 02 	lds	r24, 0x026F	; 0x80026f <minutes1>
+     836:	8f 5f       	subi	r24, 0xFF	; 255
+     838:	80 93 6f 02 	sts	0x026F, r24	; 0x80026f <minutes1>
+		seconds1=0;
+     83c:	10 92 70 02 	sts	0x0270, r1	; 0x800270 <seconds1>
+	}
+	if(seconds2>59)
+     840:	80 91 6d 02 	lds	r24, 0x026D	; 0x80026d <seconds2>
+     844:	8c 33       	cpi	r24, 0x3C	; 60
+     846:	38 f0       	brcs	.+14     	; 0x856 <__vector_8+0x5c>
+	{
+		minutes2++;
+     848:	80 91 6c 02 	lds	r24, 0x026C	; 0x80026c <minutes2>
+     84c:	8f 5f       	subi	r24, 0xFF	; 255
+     84e:	80 93 6c 02 	sts	0x026C, r24	; 0x80026c <minutes2>
+		seconds2=0;
+     852:	10 92 6d 02 	sts	0x026D, r1	; 0x80026d <seconds2>
+	}
+	if(minutes1>59)
+     856:	80 91 6f 02 	lds	r24, 0x026F	; 0x80026f <minutes1>
+     85a:	8c 33       	cpi	r24, 0x3C	; 60
+     85c:	38 f0       	brcs	.+14     	; 0x86c <__vector_8+0x72>
+	{
+		hours1++;
+     85e:	80 91 6e 02 	lds	r24, 0x026E	; 0x80026e <hours1>
+     862:	8f 5f       	subi	r24, 0xFF	; 255
+     864:	80 93 6e 02 	sts	0x026E, r24	; 0x80026e <hours1>
+		minutes1=0;
+     868:	10 92 6f 02 	sts	0x026F, r1	; 0x80026f <minutes1>
+	}
+	if(minutes2>59)
+     86c:	80 91 6c 02 	lds	r24, 0x026C	; 0x80026c <minutes2>
+     870:	8c 33       	cpi	r24, 0x3C	; 60
+     872:	38 f0       	brcs	.+14     	; 0x882 <__vector_8+0x88>
+	{
+		hours2++;
+     874:	80 91 6b 02 	lds	r24, 0x026B	; 0x80026b <hours2>
+     878:	8f 5f       	subi	r24, 0xFF	; 255
+     87a:	80 93 6b 02 	sts	0x026B, r24	; 0x80026b <hours2>
+		minutes2=0;
+     87e:	10 92 6c 02 	sts	0x026C, r1	; 0x80026c <minutes2>
+	}
+	TCNT1H=(-7812)>>8;
+     882:	81 ee       	ldi	r24, 0xE1	; 225
+     884:	8d bd       	out	0x2d, r24	; 45
+	TCNT1L=(-7812)&0xFF;
+     886:	8c e7       	ldi	r24, 0x7C	; 124
+     888:	8c bd       	out	0x2c, r24	; 44
+	
+}
+     88a:	8f 91       	pop	r24
+     88c:	0f 90       	pop	r0
+     88e:	0f be       	out	0x3f, r0	; 63
+     890:	0f 90       	pop	r0
+     892:	1f 90       	pop	r1
+     894:	18 95       	reti
+
+00000896 <disp_time_remaining_timer1>:
+void disp_time_remaining_timer1()
+{
+     896:	cf 93       	push	r28
+     898:	df 93       	push	r29
+	time_remaininginminutes_timer1=((set_hours1*60)+set_minutes1)-((hours1*60)+minutes1);
+     89a:	40 91 69 02 	lds	r20, 0x0269	; 0x800269 <set_hours1>
+     89e:	80 91 6a 02 	lds	r24, 0x026A	; 0x80026a <set_minutes1>
+     8a2:	20 91 6e 02 	lds	r18, 0x026E	; 0x80026e <hours1>
+     8a6:	30 91 6f 02 	lds	r19, 0x026F	; 0x80026f <minutes1>
+     8aa:	90 e0       	ldi	r25, 0x00	; 0
+     8ac:	bc 01       	movw	r22, r24
+     8ae:	ec e3       	ldi	r30, 0x3C	; 60
+     8b0:	4e 9f       	mul	r20, r30
+     8b2:	60 0d       	add	r22, r0
+     8b4:	71 1d       	adc	r23, r1
+     8b6:	11 24       	eor	r1, r1
+     8b8:	ab 01       	movw	r20, r22
+     8ba:	64 ec       	ldi	r22, 0xC4	; 196
+     8bc:	62 03       	mulsu	r22, r18
+     8be:	c0 01       	movw	r24, r0
+     8c0:	11 24       	eor	r1, r1
+     8c2:	83 1b       	sub	r24, r19
+     8c4:	91 09       	sbc	r25, r1
+     8c6:	84 0f       	add	r24, r20
+     8c8:	95 1f       	adc	r25, r21
+     8ca:	90 93 65 02 	sts	0x0265, r25	; 0x800265 <time_remaininginminutes_timer1+0x1>
+     8ce:	80 93 64 02 	sts	0x0264, r24	; 0x800264 <time_remaininginminutes_timer1>
+	OLED_SetCursor(3,hours_pos10);
+     8d2:	6c e3       	ldi	r22, 0x3C	; 60
+     8d4:	83 e0       	ldi	r24, 0x03	; 3
+     8d6:	32 dd       	rcall	.-1436   	; 0x33c <OLED_SetCursor>
+	OLED_DisplayNumber(10,(time_remaininginminutes_timer1/60),2); // time remaining is calculated in mins so dividing by 60 gives hour value
+     8d8:	80 91 64 02 	lds	r24, 0x0264	; 0x800264 <time_remaininginminutes_timer1>
+     8dc:	90 91 65 02 	lds	r25, 0x0265	; 0x800265 <time_remaininginminutes_timer1+0x1>
+     8e0:	cc e3       	ldi	r28, 0x3C	; 60
+     8e2:	d0 e0       	ldi	r29, 0x00	; 0
+     8e4:	be 01       	movw	r22, r28
+     8e6:	fc d3       	rcall	.+2040   	; 0x10e0 <__divmodhi4>
+     8e8:	ab 01       	movw	r20, r22
+     8ea:	77 0f       	add	r23, r23
+     8ec:	66 0b       	sbc	r22, r22
+     8ee:	77 0b       	sbc	r23, r23
+     8f0:	22 e0       	ldi	r18, 0x02	; 2
+     8f2:	8a e0       	ldi	r24, 0x0A	; 10
+     8f4:	8d dd       	rcall	.-1254   	; 0x410 <OLED_DisplayNumber>
+	OLED_SetCursor(3,minutes_pos10);
+     8f6:	6e e4       	ldi	r22, 0x4E	; 78
+     8f8:	83 e0       	ldi	r24, 0x03	; 3
+     8fa:	20 dd       	rcall	.-1472   	; 0x33c <OLED_SetCursor>
+	OLED_DisplayNumber(10,(time_remaininginminutes_timer1%60),2);
+     8fc:	80 91 64 02 	lds	r24, 0x0264	; 0x800264 <time_remaininginminutes_timer1>
+     900:	90 91 65 02 	lds	r25, 0x0265	; 0x800265 <time_remaininginminutes_timer1+0x1>
+     904:	be 01       	movw	r22, r28
+     906:	ec d3       	rcall	.+2008   	; 0x10e0 <__divmodhi4>
+     908:	ac 01       	movw	r20, r24
+     90a:	99 0f       	add	r25, r25
+     90c:	66 0b       	sbc	r22, r22
+     90e:	77 0b       	sbc	r23, r23
+     910:	22 e0       	ldi	r18, 0x02	; 2
+     912:	8a e0       	ldi	r24, 0x0A	; 10
+     914:	7d dd       	rcall	.-1286   	; 0x410 <OLED_DisplayNumber>
+	OLED_SetCursor(3,seconds_pos10);
+     916:	60 e6       	ldi	r22, 0x60	; 96
+     918:	83 e0       	ldi	r24, 0x03	; 3
+     91a:	10 dd       	rcall	.-1504   	; 0x33c <OLED_SetCursor>
+	OLED_DisplayNumber(10,(60-seconds1),2);
+     91c:	80 91 70 02 	lds	r24, 0x0270	; 0x800270 <seconds1>
+     920:	ae 01       	movw	r20, r28
+     922:	48 1b       	sub	r20, r24
+     924:	51 09       	sbc	r21, r1
+     926:	05 2e       	mov	r0, r21
+     928:	00 0c       	add	r0, r0
+     92a:	66 0b       	sbc	r22, r22
+     92c:	77 0b       	sbc	r23, r23
+     92e:	22 e0       	ldi	r18, 0x02	; 2
+     930:	8a e0       	ldi	r24, 0x0A	; 10
+     932:	6e dd       	rcall	.-1316   	; 0x410 <OLED_DisplayNumber>
+}
+     934:	df 91       	pop	r29
+     936:	cf 91       	pop	r28
+     938:	08 95       	ret
+
+0000093a <disp_time_remaining_timer2>:
+void disp_time_remaining_timer2()
+{
+     93a:	cf 93       	push	r28
+     93c:	df 93       	push	r29
+		time_remaininginminutes_timer2=((set_hours2*60)+set_minutes2)-((hours2*60)+minutes2);
+     93e:	40 91 67 02 	lds	r20, 0x0267	; 0x800267 <set_hours2>
+     942:	80 91 68 02 	lds	r24, 0x0268	; 0x800268 <set_minutes2>
+     946:	20 91 6b 02 	lds	r18, 0x026B	; 0x80026b <hours2>
+     94a:	30 91 6c 02 	lds	r19, 0x026C	; 0x80026c <minutes2>
+     94e:	90 e0       	ldi	r25, 0x00	; 0
+     950:	bc 01       	movw	r22, r24
+     952:	ec e3       	ldi	r30, 0x3C	; 60
+     954:	4e 9f       	mul	r20, r30
+     956:	60 0d       	add	r22, r0
+     958:	71 1d       	adc	r23, r1
+     95a:	11 24       	eor	r1, r1
+     95c:	ab 01       	movw	r20, r22
+     95e:	64 ec       	ldi	r22, 0xC4	; 196
+     960:	62 03       	mulsu	r22, r18
+     962:	c0 01       	movw	r24, r0
+     964:	11 24       	eor	r1, r1
+     966:	83 1b       	sub	r24, r19
+     968:	91 09       	sbc	r25, r1
+     96a:	84 0f       	add	r24, r20
+     96c:	95 1f       	adc	r25, r21
+     96e:	90 93 63 02 	sts	0x0263, r25	; 0x800263 <__data_end+0x1>
+     972:	80 93 62 02 	sts	0x0262, r24	; 0x800262 <__data_end>
+		OLED_SetCursor(5,hours_pos10);
+     976:	6c e3       	ldi	r22, 0x3C	; 60
+     978:	85 e0       	ldi	r24, 0x05	; 5
+     97a:	e0 dc       	rcall	.-1600   	; 0x33c <OLED_SetCursor>
+		OLED_DisplayNumber(10,(time_remaininginminutes_timer2/60),2); // time remaining is calculated in mins so dividing by 60 gives hour value
+     97c:	80 91 62 02 	lds	r24, 0x0262	; 0x800262 <__data_end>
+     980:	90 91 63 02 	lds	r25, 0x0263	; 0x800263 <__data_end+0x1>
+     984:	cc e3       	ldi	r28, 0x3C	; 60
+     986:	d0 e0       	ldi	r29, 0x00	; 0
+     988:	be 01       	movw	r22, r28
+     98a:	aa d3       	rcall	.+1876   	; 0x10e0 <__divmodhi4>
+     98c:	ab 01       	movw	r20, r22
+     98e:	77 0f       	add	r23, r23
+     990:	66 0b       	sbc	r22, r22
+     992:	77 0b       	sbc	r23, r23
+     994:	22 e0       	ldi	r18, 0x02	; 2
+     996:	8a e0       	ldi	r24, 0x0A	; 10
+     998:	3b dd       	rcall	.-1418   	; 0x410 <OLED_DisplayNumber>
+		OLED_SetCursor(5,minutes_pos10);
+     99a:	6e e4       	ldi	r22, 0x4E	; 78
+     99c:	85 e0       	ldi	r24, 0x05	; 5
+     99e:	ce dc       	rcall	.-1636   	; 0x33c <OLED_SetCursor>
+		OLED_DisplayNumber(10,(time_remaininginminutes_timer2%60),2);
+     9a0:	80 91 62 02 	lds	r24, 0x0262	; 0x800262 <__data_end>
+     9a4:	90 91 63 02 	lds	r25, 0x0263	; 0x800263 <__data_end+0x1>
+     9a8:	be 01       	movw	r22, r28
+     9aa:	9a d3       	rcall	.+1844   	; 0x10e0 <__divmodhi4>
+     9ac:	ac 01       	movw	r20, r24
+     9ae:	99 0f       	add	r25, r25
+     9b0:	66 0b       	sbc	r22, r22
+     9b2:	77 0b       	sbc	r23, r23
+     9b4:	22 e0       	ldi	r18, 0x02	; 2
+     9b6:	8a e0       	ldi	r24, 0x0A	; 10
+     9b8:	2b dd       	rcall	.-1450   	; 0x410 <OLED_DisplayNumber>
+		OLED_SetCursor(5,seconds_pos10);
+     9ba:	60 e6       	ldi	r22, 0x60	; 96
+     9bc:	85 e0       	ldi	r24, 0x05	; 5
+     9be:	be dc       	rcall	.-1668   	; 0x33c <OLED_SetCursor>
+		OLED_DisplayNumber(10,(60-seconds2),2);
+     9c0:	80 91 6d 02 	lds	r24, 0x026D	; 0x80026d <seconds2>
+     9c4:	ae 01       	movw	r20, r28
+     9c6:	48 1b       	sub	r20, r24
+     9c8:	51 09       	sbc	r21, r1
+     9ca:	05 2e       	mov	r0, r21
+     9cc:	00 0c       	add	r0, r0
+     9ce:	66 0b       	sbc	r22, r22
+     9d0:	77 0b       	sbc	r23, r23
+     9d2:	22 e0       	ldi	r18, 0x02	; 2
+     9d4:	8a e0       	ldi	r24, 0x0A	; 10
+     9d6:	1c dd       	rcall	.-1480   	; 0x410 <OLED_DisplayNumber>
+}
+     9d8:	df 91       	pop	r29
+     9da:	cf 91       	pop	r28
+     9dc:	08 95       	ret
+
+000009de <relay1off>:
+void relay1off()
+{
+	RPORT&=~(1<<relay1_pin);
+     9de:	c0 98       	cbi	0x18, 0	; 24
+	relay1_state=off;
+     9e0:	10 92 72 02 	sts	0x0272, r1	; 0x800272 <relay1_state>
+     9e4:	08 95       	ret
+
+000009e6 <relay2off>:
+}
+void relay2off()
+{
+	RPORT&=~(1<<relay2_pin);
+     9e6:	c1 98       	cbi	0x18, 1	; 24
+	relay2_state=off;
+     9e8:	10 92 71 02 	sts	0x0271, r1	; 0x800271 <relay2_state>
+     9ec:	08 95       	ret
+
+000009ee <relay1on>:
+}
+void relay1on()
+{
+ 		RPORT|=(1<<relay1_pin);
+     9ee:	c0 9a       	sbi	0x18, 0	; 24
+		relay1_state=on;
+     9f0:	81 e0       	ldi	r24, 0x01	; 1
+     9f2:	80 93 72 02 	sts	0x0272, r24	; 0x800272 <relay1_state>
+     9f6:	08 95       	ret
+
+000009f8 <relay2on>:
+	
+}
+void relay2on()
+{
+	RPORT|=(1<<relay2_pin);
+     9f8:	c1 9a       	sbi	0x18, 1	; 24
+	relay2_state=on;
+     9fa:	81 e0       	ldi	r24, 0x01	; 1
+     9fc:	80 93 71 02 	sts	0x0271, r24	; 0x800271 <relay2_state>
+     a00:	08 95       	ret
+
+00000a02 <printPortselected>:
+	
+}
+void printPortselected() //prints on OLED which timer will be set when buttons pressed
+{
+	OLED_SetCursor(1,1);
+     a02:	61 e0       	ldi	r22, 0x01	; 1
+     a04:	81 e0       	ldi	r24, 0x01	; 1
+     a06:	9a dc       	rcall	.-1740   	; 0x33c <OLED_SetCursor>
+	OLED_Printf("PORT selected =");
+     a08:	80 e6       	ldi	r24, 0x60	; 96
+     a0a:	90 e0       	ldi	r25, 0x00	; 0
+     a0c:	9f 93       	push	r25
+     a0e:	8f 93       	push	r24
+     a10:	d2 dd       	rcall	.-1116   	; 0x5b6 <OLED_Printf>
+	OLED_SetCursor(1,96);
+     a12:	60 e6       	ldi	r22, 0x60	; 96
+     a14:	81 e0       	ldi	r24, 0x01	; 1
+     a16:	92 dc       	rcall	.-1756   	; 0x33c <OLED_SetCursor>
+	OLED_DisplayNumber(10,select_port_switch_flag+1,1);
+     a18:	40 91 66 02 	lds	r20, 0x0266	; 0x800266 <select_port_switch_flag>
+     a1c:	50 e0       	ldi	r21, 0x00	; 0
+     a1e:	4f 5f       	subi	r20, 0xFF	; 255
+     a20:	5f 4f       	sbci	r21, 0xFF	; 255
+     a22:	05 2e       	mov	r0, r21
+     a24:	00 0c       	add	r0, r0
+     a26:	66 0b       	sbc	r22, r22
+     a28:	77 0b       	sbc	r23, r23
+     a2a:	21 e0       	ldi	r18, 0x01	; 1
+     a2c:	8a e0       	ldi	r24, 0x0A	; 10
+     a2e:	f0 dc       	rcall	.-1568   	; 0x410 <OLED_DisplayNumber>
+     a30:	0f 90       	pop	r0
+     a32:	0f 90       	pop	r0
+     a34:	08 95       	ret
+
+00000a36 <printzerotime1>:
+}
+
+void printzerotime1()
+{
+     a36:	cf 93       	push	r28
+     a38:	df 93       	push	r29
+	OLED_SetCursor(3,1);           // go to row 0 column 1
+     a3a:	61 e0       	ldi	r22, 0x01	; 1
+     a3c:	83 e0       	ldi	r24, 0x03	; 3
+     a3e:	7e dc       	rcall	.-1796   	; 0x33c <OLED_SetCursor>
+	OLED_Printf("<Timer 1>"); 
+     a40:	80 e7       	ldi	r24, 0x70	; 112
+     a42:	90 e0       	ldi	r25, 0x00	; 0
+     a44:	9f 93       	push	r25
+     a46:	8f 93       	push	r24
+     a48:	b6 dd       	rcall	.-1172   	; 0x5b6 <OLED_Printf>
+	OLED_SetCursor(3,hours_pos10);           // display set time as 0:00
+     a4a:	6c e3       	ldi	r22, 0x3C	; 60
+     a4c:	83 e0       	ldi	r24, 0x03	; 3
+     a4e:	76 dc       	rcall	.-1812   	; 0x33c <OLED_SetCursor>
+	OLED_DisplayNumber(10,0,2);   //(uint8_t v_numericSystem_u8, uint32_t v_number_u32, uint8_t v_numOfDigitsToDisplay_u8) , 0 hours
+     a50:	22 e0       	ldi	r18, 0x02	; 2
+     a52:	40 e0       	ldi	r20, 0x00	; 0
+     a54:	50 e0       	ldi	r21, 0x00	; 0
+     a56:	ba 01       	movw	r22, r20
+     a58:	8a e0       	ldi	r24, 0x0A	; 10
+     a5a:	da dc       	rcall	.-1612   	; 0x410 <OLED_DisplayNumber>
+	OLED_SetCursor(3,colon1_pos);
+     a5c:	68 e4       	ldi	r22, 0x48	; 72
+     a5e:	83 e0       	ldi	r24, 0x03	; 3
+     a60:	6d dc       	rcall	.-1830   	; 0x33c <OLED_SetCursor>
+	OLED_Printf(":");
+     a62:	ca e7       	ldi	r28, 0x7A	; 122
+     a64:	d0 e0       	ldi	r29, 0x00	; 0
+     a66:	df 93       	push	r29
+     a68:	cf 93       	push	r28
+     a6a:	a5 dd       	rcall	.-1206   	; 0x5b6 <OLED_Printf>
+	OLED_SetCursor(3,minutes_pos10);
+     a6c:	6e e4       	ldi	r22, 0x4E	; 78
+     a6e:	83 e0       	ldi	r24, 0x03	; 3
+     a70:	65 dc       	rcall	.-1846   	; 0x33c <OLED_SetCursor>
+	OLED_DisplayNumber(10,0,2);		// 0 minutes
+     a72:	22 e0       	ldi	r18, 0x02	; 2
+     a74:	40 e0       	ldi	r20, 0x00	; 0
+     a76:	50 e0       	ldi	r21, 0x00	; 0
+     a78:	ba 01       	movw	r22, r20
+     a7a:	8a e0       	ldi	r24, 0x0A	; 10
+     a7c:	c9 dc       	rcall	.-1646   	; 0x410 <OLED_DisplayNumber>
+	OLED_SetCursor(3,colon2_pos);
+     a7e:	6a e5       	ldi	r22, 0x5A	; 90
+     a80:	83 e0       	ldi	r24, 0x03	; 3
+     a82:	5c dc       	rcall	.-1864   	; 0x33c <OLED_SetCursor>
+	OLED_Printf(":");
+     a84:	df 93       	push	r29
+     a86:	cf 93       	push	r28
+     a88:	96 dd       	rcall	.-1236   	; 0x5b6 <OLED_Printf>
+	OLED_SetCursor(3,seconds_pos10);
+     a8a:	60 e6       	ldi	r22, 0x60	; 96
+     a8c:	83 e0       	ldi	r24, 0x03	; 3
+     a8e:	56 dc       	rcall	.-1876   	; 0x33c <OLED_SetCursor>
+	OLED_DisplayNumber(10,0,2);	// 0 seconds
+     a90:	22 e0       	ldi	r18, 0x02	; 2
+     a92:	40 e0       	ldi	r20, 0x00	; 0
+     a94:	50 e0       	ldi	r21, 0x00	; 0
+     a96:	ba 01       	movw	r22, r20
+     a98:	8a e0       	ldi	r24, 0x0A	; 10
+     a9a:	ba dc       	rcall	.-1676   	; 0x410 <OLED_DisplayNumber>
+     a9c:	0f 90       	pop	r0
+     a9e:	0f 90       	pop	r0
+     aa0:	0f 90       	pop	r0
+     aa2:	0f 90       	pop	r0
+     aa4:	0f 90       	pop	r0
+     aa6:	0f 90       	pop	r0
+}
+     aa8:	df 91       	pop	r29
+     aaa:	cf 91       	pop	r28
+     aac:	08 95       	ret
+
+00000aae <printzerotime2>:
+void printzerotime2()
+{
+     aae:	cf 93       	push	r28
+     ab0:	df 93       	push	r29
+	OLED_SetCursor(5,1);           
+     ab2:	61 e0       	ldi	r22, 0x01	; 1
+     ab4:	85 e0       	ldi	r24, 0x05	; 5
+     ab6:	42 dc       	rcall	.-1916   	; 0x33c <OLED_SetCursor>
+	OLED_Printf("<Timer 2>");
+     ab8:	8c e7       	ldi	r24, 0x7C	; 124
+     aba:	90 e0       	ldi	r25, 0x00	; 0
+     abc:	9f 93       	push	r25
+     abe:	8f 93       	push	r24
+     ac0:	7a dd       	rcall	.-1292   	; 0x5b6 <OLED_Printf>
+	OLED_SetCursor(5,hours_pos10);           // display set time as 0:00
+     ac2:	6c e3       	ldi	r22, 0x3C	; 60
+     ac4:	85 e0       	ldi	r24, 0x05	; 5
+     ac6:	3a dc       	rcall	.-1932   	; 0x33c <OLED_SetCursor>
+	OLED_DisplayNumber(10,0,2);   //(uint8_t v_numericSystem_u8, uint32_t v_number_u32, uint8_t v_numOfDigitsToDisplay_u8) , 0 hours
+     ac8:	22 e0       	ldi	r18, 0x02	; 2
+     aca:	40 e0       	ldi	r20, 0x00	; 0
+     acc:	50 e0       	ldi	r21, 0x00	; 0
+     ace:	ba 01       	movw	r22, r20
+     ad0:	8a e0       	ldi	r24, 0x0A	; 10
+     ad2:	9e dc       	rcall	.-1732   	; 0x410 <OLED_DisplayNumber>
+	OLED_SetCursor(5,colon1_pos);
+     ad4:	68 e4       	ldi	r22, 0x48	; 72
+     ad6:	85 e0       	ldi	r24, 0x05	; 5
+     ad8:	31 dc       	rcall	.-1950   	; 0x33c <OLED_SetCursor>
+	OLED_Printf(":");
+     ada:	ca e7       	ldi	r28, 0x7A	; 122
+     adc:	d0 e0       	ldi	r29, 0x00	; 0
+     ade:	df 93       	push	r29
+     ae0:	cf 93       	push	r28
+     ae2:	69 dd       	rcall	.-1326   	; 0x5b6 <OLED_Printf>
+	OLED_SetCursor(5,minutes_pos10);
+     ae4:	6e e4       	ldi	r22, 0x4E	; 78
+     ae6:	85 e0       	ldi	r24, 0x05	; 5
+     ae8:	29 dc       	rcall	.-1966   	; 0x33c <OLED_SetCursor>
+	OLED_DisplayNumber(10,0,2);		// 0 minutes
+     aea:	22 e0       	ldi	r18, 0x02	; 2
+     aec:	40 e0       	ldi	r20, 0x00	; 0
+     aee:	50 e0       	ldi	r21, 0x00	; 0
+     af0:	ba 01       	movw	r22, r20
+     af2:	8a e0       	ldi	r24, 0x0A	; 10
+     af4:	8d dc       	rcall	.-1766   	; 0x410 <OLED_DisplayNumber>
+	OLED_SetCursor(5,colon2_pos);
+     af6:	6a e5       	ldi	r22, 0x5A	; 90
+     af8:	85 e0       	ldi	r24, 0x05	; 5
+     afa:	20 dc       	rcall	.-1984   	; 0x33c <OLED_SetCursor>
+	OLED_Printf(":");
+     afc:	df 93       	push	r29
+     afe:	cf 93       	push	r28
+     b00:	5a dd       	rcall	.-1356   	; 0x5b6 <OLED_Printf>
+	OLED_SetCursor(5,seconds_pos10);
+     b02:	60 e6       	ldi	r22, 0x60	; 96
+     b04:	85 e0       	ldi	r24, 0x05	; 5
+     b06:	1a dc       	rcall	.-1996   	; 0x33c <OLED_SetCursor>
+	OLED_DisplayNumber(10,0,2);
+     b08:	22 e0       	ldi	r18, 0x02	; 2
+     b0a:	40 e0       	ldi	r20, 0x00	; 0
+     b0c:	50 e0       	ldi	r21, 0x00	; 0
+     b0e:	ba 01       	movw	r22, r20
+     b10:	8a e0       	ldi	r24, 0x0A	; 10
+     b12:	7e dc       	rcall	.-1796   	; 0x410 <OLED_DisplayNumber>
+     b14:	0f 90       	pop	r0
+     b16:	0f 90       	pop	r0
+     b18:	0f 90       	pop	r0
+     b1a:	0f 90       	pop	r0
+     b1c:	0f 90       	pop	r0
+     b1e:	0f 90       	pop	r0
+
+}
+     b20:	df 91       	pop	r29
+     b22:	cf 91       	pop	r28
+     b24:	08 95       	ret
+
+00000b26 <keypress_sound>:
+	seconds2=0;
+	timeup_sound();
+}
+void keypress_sound()
+{
+	BuzzPORT|=(1<<buzzer_pin);
+     b26:	96 9a       	sbi	0x12, 6	; 18
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     b28:	2f ef       	ldi	r18, 0xFF	; 255
+     b2a:	83 ef       	ldi	r24, 0xF3	; 243
+     b2c:	91 e0       	ldi	r25, 0x01	; 1
+     b2e:	21 50       	subi	r18, 0x01	; 1
+     b30:	80 40       	sbci	r24, 0x00	; 0
+     b32:	90 40       	sbci	r25, 0x00	; 0
+     b34:	e1 f7       	brne	.-8      	; 0xb2e <keypress_sound+0x8>
+     b36:	00 c0       	rjmp	.+0      	; 0xb38 <keypress_sound+0x12>
+     b38:	00 00       	nop
+	_delay_ms(80);
+	BuzzPORT&=~(1<<buzzer_pin);
+     b3a:	96 98       	cbi	0x12, 6	; 18
+     b3c:	08 95       	ret
+
+00000b3e <timeup_sound>:
+}
+void timeup_sound()
+{
+	BuzzPORT|=(1<<buzzer_pin);
+     b3e:	96 9a       	sbi	0x12, 6	; 18
+     b40:	2f ef       	ldi	r18, 0xFF	; 255
+     b42:	82 e5       	ldi	r24, 0x52	; 82
+     b44:	97 e0       	ldi	r25, 0x07	; 7
+     b46:	21 50       	subi	r18, 0x01	; 1
+     b48:	80 40       	sbci	r24, 0x00	; 0
+     b4a:	90 40       	sbci	r25, 0x00	; 0
+     b4c:	e1 f7       	brne	.-8      	; 0xb46 <timeup_sound+0x8>
+     b4e:	00 c0       	rjmp	.+0      	; 0xb50 <timeup_sound+0x12>
+     b50:	00 00       	nop
+	_delay_ms(300);
+	BuzzPORT&=~(1<<buzzer_pin);	
+     b52:	96 98       	cbi	0x12, 6	; 18
+     b54:	08 95       	ret
+
+00000b56 <relay1_off_sequence>:
+
+}
+
+void relay1_off_sequence()
+{
+	printzerotime1();
+     b56:	6f df       	rcall	.-290    	; 0xa36 <printzerotime1>
+	if(relay2_state==off){
+     b58:	80 91 71 02 	lds	r24, 0x0271	; 0x800271 <relay2_state>
+     b5c:	81 11       	cpse	r24, r1
+     b5e:	01 c0       	rjmp	.+2      	; 0xb62 <relay1_off_sequence+0xc>
+	cli();}
+     b60:	f8 94       	cli
+	relay1off();
+     b62:	3d df       	rcall	.-390    	; 0x9de <relay1off>
+     b64:	2f e7       	ldi	r18, 0x7F	; 127
+     b66:	88 e3       	ldi	r24, 0x38	; 56
+     b68:	91 e0       	ldi	r25, 0x01	; 1
+     b6a:	21 50       	subi	r18, 0x01	; 1
+     b6c:	80 40       	sbci	r24, 0x00	; 0
+     b6e:	90 40       	sbci	r25, 0x00	; 0
+     b70:	e1 f7       	brne	.-8      	; 0xb6a <relay1_off_sequence+0x14>
+     b72:	00 c0       	rjmp	.+0      	; 0xb74 <relay1_off_sequence+0x1e>
+     b74:	00 00       	nop
+	_delay_ms(50);
+	set_minutes1=0;
+     b76:	10 92 6a 02 	sts	0x026A, r1	; 0x80026a <set_minutes1>
+	set_hours1=0;
+     b7a:	10 92 69 02 	sts	0x0269, r1	; 0x800269 <set_hours1>
+	minutes1=0;
+     b7e:	10 92 6f 02 	sts	0x026F, r1	; 0x80026f <minutes1>
+	hours1=0;
+     b82:	10 92 6e 02 	sts	0x026E, r1	; 0x80026e <hours1>
+	seconds1=0;
+     b86:	10 92 70 02 	sts	0x0270, r1	; 0x800270 <seconds1>
+	timeup_sound();
+     b8a:	d9 df       	rcall	.-78     	; 0xb3e <timeup_sound>
+     b8c:	08 95       	ret
+
+00000b8e <relay2_off_sequence>:
+}
+void relay2_off_sequence()
+{
+	printzerotime2();
+     b8e:	8f df       	rcall	.-226    	; 0xaae <printzerotime2>
+	if(relay1_state==off){
+     b90:	80 91 72 02 	lds	r24, 0x0272	; 0x800272 <relay1_state>
+     b94:	81 11       	cpse	r24, r1
+     b96:	01 c0       	rjmp	.+2      	; 0xb9a <relay2_off_sequence+0xc>
+	cli();}
+     b98:	f8 94       	cli
+	relay2off();
+     b9a:	25 df       	rcall	.-438    	; 0x9e6 <relay2off>
+     b9c:	2f e7       	ldi	r18, 0x7F	; 127
+     b9e:	88 e3       	ldi	r24, 0x38	; 56
+     ba0:	91 e0       	ldi	r25, 0x01	; 1
+     ba2:	21 50       	subi	r18, 0x01	; 1
+     ba4:	80 40       	sbci	r24, 0x00	; 0
+     ba6:	90 40       	sbci	r25, 0x00	; 0
+     ba8:	e1 f7       	brne	.-8      	; 0xba2 <relay2_off_sequence+0x14>
+     baa:	00 c0       	rjmp	.+0      	; 0xbac <relay2_off_sequence+0x1e>
+     bac:	00 00       	nop
+	_delay_ms(50);
+	set_minutes2=0;
+     bae:	10 92 68 02 	sts	0x0268, r1	; 0x800268 <set_minutes2>
+	set_hours2=0;
+     bb2:	10 92 67 02 	sts	0x0267, r1	; 0x800267 <set_hours2>
+	minutes2=0;
+     bb6:	10 92 6c 02 	sts	0x026C, r1	; 0x80026c <minutes2>
+	hours2=0;
+     bba:	10 92 6b 02 	sts	0x026B, r1	; 0x80026b <hours2>
+	seconds2=0;
+     bbe:	10 92 6d 02 	sts	0x026D, r1	; 0x80026d <seconds2>
+	timeup_sound();
+     bc2:	bd df       	rcall	.-134    	; 0xb3e <timeup_sound>
+     bc4:	08 95       	ret
+
+00000bc6 <main>:
+void keypress_sound();
+void timeup_sound();
+
+int main(void)
+{
+	RDDR=0xFF; //relay O/P
+     bc6:	8f ef       	ldi	r24, 0xFF	; 255
+     bc8:	87 bb       	out	0x17, r24	; 23
+	BuzzDDR=0xFF;
+     bca:	81 bb       	out	0x11, r24	; 17
+	INDDR=0x00;
+     bcc:	14 ba       	out	0x14, r1	; 20
+	INPORT=0xFF;//pullup
+     bce:	85 bb       	out	0x15, r24	; 21
+	OLED_Init();  //initialize the OLED
+     bd0:	80 db       	rcall	.-2304   	; 0x2d2 <OLED_Init>
+	OLED_Clear();
+     bd2:	54 db       	rcall	.-2392   	; 0x27c <OLED_Clear>
+	TCNT1H=(-7812)>>8;
+     bd4:	81 ee       	ldi	r24, 0xE1	; 225
+     bd6:	8d bd       	out	0x2d, r24	; 45
+	TCNT1L=(-7812)&0xFF;// over flow after 977 clocks__works for1MHZ...[1/1000000x1024x977=1 second]
+     bd8:	8c e7       	ldi	r24, 0x7C	; 124
+     bda:	8c bd       	out	0x2c, r24	; 44
+	TCCR1A=0x00;//normal mode
+     bdc:	1f bc       	out	0x2f, r1	; 47
+	TCCR1B=0x05;//internal clock ,prescaler 1:1024
+     bde:	85 e0       	ldi	r24, 0x05	; 5
+     be0:	8e bd       	out	0x2e, r24	; 46
+	TIMSK=(1<<TOIE1);// enable timer1 interrupt
+     be2:	84 e0       	ldi	r24, 0x04	; 4
+     be4:	89 bf       	out	0x39, r24	; 57
+     be6:	2f ef       	ldi	r18, 0xFF	; 255
+     be8:	80 e7       	ldi	r24, 0x70	; 112
+     bea:	92 e0       	ldi	r25, 0x02	; 2
+     bec:	21 50       	subi	r18, 0x01	; 1
+     bee:	80 40       	sbci	r24, 0x00	; 0
+     bf0:	90 40       	sbci	r25, 0x00	; 0
+     bf2:	e1 f7       	brne	.-8      	; 0xbec <main+0x26>
+     bf4:	00 c0       	rjmp	.+0      	; 0xbf6 <main+0x30>
+     bf6:	00 00       	nop
+	_delay_ms(100);  /// delay added to stabilize
+	printzerotime1();
+     bf8:	1e df       	rcall	.-452    	; 0xa36 <printzerotime1>
+	printzerotime2();
+     bfa:	59 df       	rcall	.-334    	; 0xaae <printzerotime2>
+	printPortselected(); //prints on OLED which timer will be set when buttons pressed
+     bfc:	02 df       	rcall	.-508    	; 0xa02 <printPortselected>
+		{
+			_delay_ms(100);//debounce
+			if(!(INPIN&(1<<portselectionpin)))
+			{
+				keypress_sound();
+				select_port_switch_flag=!select_port_switch_flag;	
+     bfe:	d1 e0       	ldi	r29, 0x01	; 1
+     c00:	c0 e0       	ldi	r28, 0x00	; 0
+	printzerotime1();
+	printzerotime2();
+	printPortselected(); //prints on OLED which timer will be set when buttons pressed
+	while (1)
+	{
+		printPortselected(); // prints active port
+     c02:	ff de       	rcall	.-514    	; 0xa02 <printPortselected>
+		if(!(INPIN&(1<<portselectionpin)))
+     c04:	9a 99       	sbic	0x13, 2	; 19
+     c06:	13 c0       	rjmp	.+38     	; 0xc2e <main+0x68>
+     c08:	2f ef       	ldi	r18, 0xFF	; 255
+     c0a:	80 e7       	ldi	r24, 0x70	; 112
+     c0c:	92 e0       	ldi	r25, 0x02	; 2
+     c0e:	21 50       	subi	r18, 0x01	; 1
+     c10:	80 40       	sbci	r24, 0x00	; 0
+     c12:	90 40       	sbci	r25, 0x00	; 0
+     c14:	e1 f7       	brne	.-8      	; 0xc0e <main+0x48>
+     c16:	00 c0       	rjmp	.+0      	; 0xc18 <main+0x52>
+     c18:	00 00       	nop
+		{
+			_delay_ms(100);//debounce
+			if(!(INPIN&(1<<portselectionpin)))
+     c1a:	9a 99       	sbic	0x13, 2	; 19
+     c1c:	08 c0       	rjmp	.+16     	; 0xc2e <main+0x68>
+			{
+				keypress_sound();
+     c1e:	83 df       	rcall	.-250    	; 0xb26 <keypress_sound>
+				select_port_switch_flag=!select_port_switch_flag;	
+     c20:	90 91 66 02 	lds	r25, 0x0266	; 0x800266 <select_port_switch_flag>
+     c24:	8d 2f       	mov	r24, r29
+     c26:	91 11       	cpse	r25, r1
+     c28:	8c 2f       	mov	r24, r28
+     c2a:	80 93 66 02 	sts	0x0266, r24	; 0x800266 <select_port_switch_flag>
+			}
+		}
+		if((!(INPIN&(1<<switch1pin)))&&select_port_switch_flag==0)
+     c2e:	98 99       	sbic	0x13, 0	; 19
+     c30:	22 c0       	rjmp	.+68     	; 0xc76 <main+0xb0>
+     c32:	80 91 66 02 	lds	r24, 0x0266	; 0x800266 <select_port_switch_flag>
+     c36:	81 11       	cpse	r24, r1
+     c38:	1e c0       	rjmp	.+60     	; 0xc76 <main+0xb0>
+     c3a:	2f ef       	ldi	r18, 0xFF	; 255
+     c3c:	80 e7       	ldi	r24, 0x70	; 112
+     c3e:	92 e0       	ldi	r25, 0x02	; 2
+     c40:	21 50       	subi	r18, 0x01	; 1
+     c42:	80 40       	sbci	r24, 0x00	; 0
+     c44:	90 40       	sbci	r25, 0x00	; 0
+     c46:	e1 f7       	brne	.-8      	; 0xc40 <main+0x7a>
+     c48:	00 c0       	rjmp	.+0      	; 0xc4a <main+0x84>
+     c4a:	00 00       	nop
+		{
+			_delay_ms(100);
+			if(!(INPIN&(1<<switch1pin)))
+     c4c:	98 99       	sbic	0x13, 0	; 19
+     c4e:	13 c0       	rjmp	.+38     	; 0xc76 <main+0xb0>
+			{
+				keypress_sound();
+     c50:	6a df       	rcall	.-300    	; 0xb26 <keypress_sound>
+				set_minutes1=set_minutes1+15;
+     c52:	80 91 6a 02 	lds	r24, 0x026A	; 0x80026a <set_minutes1>
+     c56:	81 5f       	subi	r24, 0xF1	; 241
+     c58:	80 93 6a 02 	sts	0x026A, r24	; 0x80026a <set_minutes1>
+				if(set_minutes1>45)
+     c5c:	80 91 6a 02 	lds	r24, 0x026A	; 0x80026a <set_minutes1>
+     c60:	8e 32       	cpi	r24, 0x2E	; 46
+     c62:	10 f0       	brcs	.+4      	; 0xc68 <main+0xa2>
+				{
+					set_minutes1=0;
+     c64:	c0 93 6a 02 	sts	0x026A, r28	; 0x80026a <set_minutes1>
+				}
+				if(set_minutes1>0)
+     c68:	80 91 6a 02 	lds	r24, 0x026A	; 0x80026a <set_minutes1>
+     c6c:	88 23       	and	r24, r24
+     c6e:	19 f0       	breq	.+6      	; 0xc76 <main+0xb0>
+				{
+					disp_time_remaining_timer1();
+     c70:	12 de       	rcall	.-988    	; 0x896 <disp_time_remaining_timer1>
+					relay1on();
+     c72:	bd de       	rcall	.-646    	; 0x9ee <relay1on>
+					sei();
+     c74:	78 94       	sei
+				}
+			}
+		}
+		if((!(INPIN&(1<<switch2pin)))&&select_port_switch_flag==0)
+     c76:	99 99       	sbic	0x13, 1	; 19
+     c78:	22 c0       	rjmp	.+68     	; 0xcbe <main+0xf8>
+     c7a:	80 91 66 02 	lds	r24, 0x0266	; 0x800266 <select_port_switch_flag>
+     c7e:	81 11       	cpse	r24, r1
+     c80:	1e c0       	rjmp	.+60     	; 0xcbe <main+0xf8>
+     c82:	2f ef       	ldi	r18, 0xFF	; 255
+     c84:	80 e7       	ldi	r24, 0x70	; 112
+     c86:	92 e0       	ldi	r25, 0x02	; 2
+     c88:	21 50       	subi	r18, 0x01	; 1
+     c8a:	80 40       	sbci	r24, 0x00	; 0
+     c8c:	90 40       	sbci	r25, 0x00	; 0
+     c8e:	e1 f7       	brne	.-8      	; 0xc88 <main+0xc2>
+     c90:	00 c0       	rjmp	.+0      	; 0xc92 <main+0xcc>
+     c92:	00 00       	nop
+		{
+			_delay_ms(100);
+			if(!(INPIN&(1<<switch2pin)))
+     c94:	99 99       	sbic	0x13, 1	; 19
+     c96:	13 c0       	rjmp	.+38     	; 0xcbe <main+0xf8>
+			{
+				keypress_sound();
+     c98:	46 df       	rcall	.-372    	; 0xb26 <keypress_sound>
+				set_hours1++;
+     c9a:	80 91 69 02 	lds	r24, 0x0269	; 0x800269 <set_hours1>
+     c9e:	8f 5f       	subi	r24, 0xFF	; 255
+     ca0:	80 93 69 02 	sts	0x0269, r24	; 0x800269 <set_hours1>
+				if(set_hours1>11)
+     ca4:	80 91 69 02 	lds	r24, 0x0269	; 0x800269 <set_hours1>
+     ca8:	8c 30       	cpi	r24, 0x0C	; 12
+     caa:	10 f0       	brcs	.+4      	; 0xcb0 <main+0xea>
+				{
+					set_hours1=0;
+     cac:	c0 93 69 02 	sts	0x0269, r28	; 0x800269 <set_hours1>
+				}
+				if(set_hours1>0)
+     cb0:	80 91 69 02 	lds	r24, 0x0269	; 0x800269 <set_hours1>
+     cb4:	88 23       	and	r24, r24
+     cb6:	19 f0       	breq	.+6      	; 0xcbe <main+0xf8>
+				{
+					disp_time_remaining_timer1();
+     cb8:	ee dd       	rcall	.-1060   	; 0x896 <disp_time_remaining_timer1>
+					relay1on();
+     cba:	99 de       	rcall	.-718    	; 0x9ee <relay1on>
+					sei();
+     cbc:	78 94       	sei
+				}		
+			}
+		}
+		if((!(INPIN&(1<<switch1pin)))&&select_port_switch_flag==1)
+     cbe:	98 99       	sbic	0x13, 0	; 19
+     cc0:	22 c0       	rjmp	.+68     	; 0xd06 <main+0x140>
+     cc2:	80 91 66 02 	lds	r24, 0x0266	; 0x800266 <select_port_switch_flag>
+     cc6:	81 30       	cpi	r24, 0x01	; 1
+     cc8:	f1 f4       	brne	.+60     	; 0xd06 <main+0x140>
+     cca:	2f ef       	ldi	r18, 0xFF	; 255
+     ccc:	80 e7       	ldi	r24, 0x70	; 112
+     cce:	92 e0       	ldi	r25, 0x02	; 2
+     cd0:	21 50       	subi	r18, 0x01	; 1
+     cd2:	80 40       	sbci	r24, 0x00	; 0
+     cd4:	90 40       	sbci	r25, 0x00	; 0
+     cd6:	e1 f7       	brne	.-8      	; 0xcd0 <main+0x10a>
+     cd8:	00 c0       	rjmp	.+0      	; 0xcda <main+0x114>
+     cda:	00 00       	nop
+		{
+			_delay_ms(100);
+			if(!(INPIN&(1<<switch1pin)))
+     cdc:	98 99       	sbic	0x13, 0	; 19
+     cde:	13 c0       	rjmp	.+38     	; 0xd06 <main+0x140>
+			{
+				keypress_sound();
+     ce0:	22 df       	rcall	.-444    	; 0xb26 <keypress_sound>
+				set_minutes2=set_minutes2+15;
+     ce2:	80 91 68 02 	lds	r24, 0x0268	; 0x800268 <set_minutes2>
+     ce6:	81 5f       	subi	r24, 0xF1	; 241
+     ce8:	80 93 68 02 	sts	0x0268, r24	; 0x800268 <set_minutes2>
+				if(set_minutes2>45)
+     cec:	80 91 68 02 	lds	r24, 0x0268	; 0x800268 <set_minutes2>
+     cf0:	8e 32       	cpi	r24, 0x2E	; 46
+     cf2:	10 f0       	brcs	.+4      	; 0xcf8 <main+0x132>
+				{
+					set_minutes2=0;
+     cf4:	c0 93 68 02 	sts	0x0268, r28	; 0x800268 <set_minutes2>
+				}
+				if(set_minutes2>0)
+     cf8:	80 91 68 02 	lds	r24, 0x0268	; 0x800268 <set_minutes2>
+     cfc:	88 23       	and	r24, r24
+     cfe:	19 f0       	breq	.+6      	; 0xd06 <main+0x140>
+				{
+					disp_time_remaining_timer2();
+     d00:	1c de       	rcall	.-968    	; 0x93a <disp_time_remaining_timer2>
+					relay2on();
+     d02:	7a de       	rcall	.-780    	; 0x9f8 <relay2on>
+					sei();
+     d04:	78 94       	sei
+				}
+			}
+		}
+		if((!(INPIN&(1<<switch2pin)))&&select_port_switch_flag==1)
+     d06:	99 99       	sbic	0x13, 1	; 19
+     d08:	22 c0       	rjmp	.+68     	; 0xd4e <main+0x188>
+     d0a:	80 91 66 02 	lds	r24, 0x0266	; 0x800266 <select_port_switch_flag>
+     d0e:	81 30       	cpi	r24, 0x01	; 1
+     d10:	f1 f4       	brne	.+60     	; 0xd4e <main+0x188>
+     d12:	2f ef       	ldi	r18, 0xFF	; 255
+     d14:	80 e7       	ldi	r24, 0x70	; 112
+     d16:	92 e0       	ldi	r25, 0x02	; 2
+     d18:	21 50       	subi	r18, 0x01	; 1
+     d1a:	80 40       	sbci	r24, 0x00	; 0
+     d1c:	90 40       	sbci	r25, 0x00	; 0
+     d1e:	e1 f7       	brne	.-8      	; 0xd18 <main+0x152>
+     d20:	00 c0       	rjmp	.+0      	; 0xd22 <main+0x15c>
+     d22:	00 00       	nop
+		{
+			_delay_ms(100);
+			if(!(INPIN&(1<<switch2pin)))
+     d24:	99 99       	sbic	0x13, 1	; 19
+     d26:	13 c0       	rjmp	.+38     	; 0xd4e <main+0x188>
+			{
+				keypress_sound();
+     d28:	fe de       	rcall	.-516    	; 0xb26 <keypress_sound>
+				set_hours2++;
+     d2a:	80 91 67 02 	lds	r24, 0x0267	; 0x800267 <set_hours2>
+     d2e:	8f 5f       	subi	r24, 0xFF	; 255
+     d30:	80 93 67 02 	sts	0x0267, r24	; 0x800267 <set_hours2>
+				if(set_hours2>11)
+     d34:	80 91 67 02 	lds	r24, 0x0267	; 0x800267 <set_hours2>
+     d38:	8c 30       	cpi	r24, 0x0C	; 12
+     d3a:	10 f0       	brcs	.+4      	; 0xd40 <main+0x17a>
+				{
+					set_hours2=0;
+     d3c:	c0 93 67 02 	sts	0x0267, r28	; 0x800267 <set_hours2>
+				}
+				if(set_hours2>0)
+     d40:	80 91 67 02 	lds	r24, 0x0267	; 0x800267 <set_hours2>
+     d44:	88 23       	and	r24, r24
+     d46:	19 f0       	breq	.+6      	; 0xd4e <main+0x188>
+				{
+					disp_time_remaining_timer2();
+     d48:	f8 dd       	rcall	.-1040   	; 0x93a <disp_time_remaining_timer2>
+					relay2on();
+     d4a:	56 de       	rcall	.-852    	; 0x9f8 <relay2on>
+					sei();
+     d4c:	78 94       	sei
+				}
+				
+			}
+		}
+		
+		if(!(INPIN&(1<<switch2pin)))// if both switches pressed simultaneously//
+     d4e:	99 99       	sbic	0x13, 1	; 19
+     d50:	16 c0       	rjmp	.+44     	; 0xd7e <main+0x1b8>
+     d52:	2f ef       	ldi	r18, 0xFF	; 255
+     d54:	80 e7       	ldi	r24, 0x70	; 112
+     d56:	92 e0       	ldi	r25, 0x02	; 2
+     d58:	21 50       	subi	r18, 0x01	; 1
+     d5a:	80 40       	sbci	r24, 0x00	; 0
+     d5c:	90 40       	sbci	r25, 0x00	; 0
+     d5e:	e1 f7       	brne	.-8      	; 0xd58 <main+0x192>
+     d60:	00 c0       	rjmp	.+0      	; 0xd62 <main+0x19c>
+     d62:	00 00       	nop
+		{
+			_delay_ms(100);
+			if(!(INPIN&(1<<switch1pin)))
+     d64:	98 99       	sbic	0x13, 0	; 19
+     d66:	0b c0       	rjmp	.+22     	; 0xd7e <main+0x1b8>
+			{
+				keypress_sound();
+     d68:	de de       	rcall	.-580    	; 0xb26 <keypress_sound>
+				if(select_port_switch_flag==0){
+     d6a:	80 91 66 02 	lds	r24, 0x0266	; 0x800266 <select_port_switch_flag>
+     d6e:	81 11       	cpse	r24, r1
+     d70:	01 c0       	rjmp	.+2      	; 0xd74 <main+0x1ae>
+				relay1_off_sequence();}
+     d72:	f1 de       	rcall	.-542    	; 0xb56 <relay1_off_sequence>
+				if(select_port_switch_flag==1){
+     d74:	80 91 66 02 	lds	r24, 0x0266	; 0x800266 <select_port_switch_flag>
+     d78:	81 30       	cpi	r24, 0x01	; 1
+     d7a:	09 f4       	brne	.+2      	; 0xd7e <main+0x1b8>
+				relay2_off_sequence();}
+     d7c:	08 df       	rcall	.-496    	; 0xb8e <relay2_off_sequence>
+			}
+		}
+		if(relay1_state==on)
+     d7e:	80 91 72 02 	lds	r24, 0x0272	; 0x800272 <relay1_state>
+     d82:	81 30       	cpi	r24, 0x01	; 1
+     d84:	91 f4       	brne	.+36     	; 0xdaa <main+0x1e4>
+		{
+			disp_time_remaining_timer1();//displays time remaining for relay1 to switch off
+     d86:	87 dd       	rcall	.-1266   	; 0x896 <disp_time_remaining_timer1>
+			if((minutes1==set_minutes1)&&(hours1==set_hours1)&&(seconds1==59))
+     d88:	90 91 6f 02 	lds	r25, 0x026F	; 0x80026f <minutes1>
+     d8c:	80 91 6a 02 	lds	r24, 0x026A	; 0x80026a <set_minutes1>
+     d90:	98 13       	cpse	r25, r24
+     d92:	0b c0       	rjmp	.+22     	; 0xdaa <main+0x1e4>
+     d94:	90 91 6e 02 	lds	r25, 0x026E	; 0x80026e <hours1>
+     d98:	80 91 69 02 	lds	r24, 0x0269	; 0x800269 <set_hours1>
+     d9c:	98 13       	cpse	r25, r24
+     d9e:	05 c0       	rjmp	.+10     	; 0xdaa <main+0x1e4>
+     da0:	80 91 70 02 	lds	r24, 0x0270	; 0x800270 <seconds1>
+     da4:	8b 33       	cpi	r24, 0x3B	; 59
+     da6:	09 f4       	brne	.+2      	; 0xdaa <main+0x1e4>
+			{
+				relay1_off_sequence();
+     da8:	d6 de       	rcall	.-596    	; 0xb56 <relay1_off_sequence>
+			}
+		}
+		if(relay2_state==on)
+     daa:	80 91 71 02 	lds	r24, 0x0271	; 0x800271 <relay2_state>
+     dae:	81 30       	cpi	r24, 0x01	; 1
+     db0:	09 f0       	breq	.+2      	; 0xdb4 <main+0x1ee>
+     db2:	27 cf       	rjmp	.-434    	; 0xc02 <main+0x3c>
+		{
+			disp_time_remaining_timer2();//displays time remaining for relay1 to switch off
+     db4:	c2 dd       	rcall	.-1148   	; 0x93a <disp_time_remaining_timer2>
+			if((minutes2==set_minutes2)&&(hours2==set_hours2)&&(seconds2==59))
+     db6:	90 91 6c 02 	lds	r25, 0x026C	; 0x80026c <minutes2>
+     dba:	80 91 68 02 	lds	r24, 0x0268	; 0x800268 <set_minutes2>
+     dbe:	98 13       	cpse	r25, r24
+     dc0:	20 cf       	rjmp	.-448    	; 0xc02 <main+0x3c>
+     dc2:	90 91 6b 02 	lds	r25, 0x026B	; 0x80026b <hours2>
+     dc6:	80 91 67 02 	lds	r24, 0x0267	; 0x800267 <set_hours2>
+     dca:	98 13       	cpse	r25, r24
+     dcc:	1a cf       	rjmp	.-460    	; 0xc02 <main+0x3c>
+     dce:	80 91 6d 02 	lds	r24, 0x026D	; 0x80026d <seconds2>
+     dd2:	8b 33       	cpi	r24, 0x3B	; 59
+     dd4:	09 f0       	breq	.+2      	; 0xdd8 <main+0x212>
+     dd6:	15 cf       	rjmp	.-470    	; 0xc02 <main+0x3c>
+			{
+				relay2_off_sequence();
+     dd8:	da de       	rcall	.-588    	; 0xb8e <relay2_off_sequence>
+     dda:	13 cf       	rjmp	.-474    	; 0xc02 <main+0x3c>
+
+00000ddc <__subsf3>:
+     ddc:	50 58       	subi	r21, 0x80	; 128
+
+00000dde <__addsf3>:
+     dde:	bb 27       	eor	r27, r27
+     de0:	aa 27       	eor	r26, r26
+     de2:	0e d0       	rcall	.+28     	; 0xe00 <__addsf3x>
+     de4:	e0 c0       	rjmp	.+448    	; 0xfa6 <__fp_round>
+     de6:	d1 d0       	rcall	.+418    	; 0xf8a <__fp_pscA>
+     de8:	30 f0       	brcs	.+12     	; 0xdf6 <__addsf3+0x18>
+     dea:	d6 d0       	rcall	.+428    	; 0xf98 <__fp_pscB>
+     dec:	20 f0       	brcs	.+8      	; 0xdf6 <__addsf3+0x18>
+     dee:	31 f4       	brne	.+12     	; 0xdfc <__addsf3+0x1e>
+     df0:	9f 3f       	cpi	r25, 0xFF	; 255
+     df2:	11 f4       	brne	.+4      	; 0xdf8 <__addsf3+0x1a>
+     df4:	1e f4       	brtc	.+6      	; 0xdfc <__addsf3+0x1e>
+     df6:	c6 c0       	rjmp	.+396    	; 0xf84 <__fp_nan>
+     df8:	0e f4       	brtc	.+2      	; 0xdfc <__addsf3+0x1e>
+     dfa:	e0 95       	com	r30
+     dfc:	e7 fb       	bst	r30, 7
+     dfe:	bc c0       	rjmp	.+376    	; 0xf78 <__fp_inf>
+
+00000e00 <__addsf3x>:
+     e00:	e9 2f       	mov	r30, r25
+     e02:	e2 d0       	rcall	.+452    	; 0xfc8 <__fp_split3>
+     e04:	80 f3       	brcs	.-32     	; 0xde6 <__addsf3+0x8>
+     e06:	ba 17       	cp	r27, r26
+     e08:	62 07       	cpc	r22, r18
+     e0a:	73 07       	cpc	r23, r19
+     e0c:	84 07       	cpc	r24, r20
+     e0e:	95 07       	cpc	r25, r21
+     e10:	18 f0       	brcs	.+6      	; 0xe18 <__addsf3x+0x18>
+     e12:	71 f4       	brne	.+28     	; 0xe30 <__addsf3x+0x30>
+     e14:	9e f5       	brtc	.+102    	; 0xe7c <__addsf3x+0x7c>
+     e16:	fa c0       	rjmp	.+500    	; 0x100c <__fp_zero>
+     e18:	0e f4       	brtc	.+2      	; 0xe1c <__addsf3x+0x1c>
+     e1a:	e0 95       	com	r30
+     e1c:	0b 2e       	mov	r0, r27
+     e1e:	ba 2f       	mov	r27, r26
+     e20:	a0 2d       	mov	r26, r0
+     e22:	0b 01       	movw	r0, r22
+     e24:	b9 01       	movw	r22, r18
+     e26:	90 01       	movw	r18, r0
+     e28:	0c 01       	movw	r0, r24
+     e2a:	ca 01       	movw	r24, r20
+     e2c:	a0 01       	movw	r20, r0
+     e2e:	11 24       	eor	r1, r1
+     e30:	ff 27       	eor	r31, r31
+     e32:	59 1b       	sub	r21, r25
+     e34:	99 f0       	breq	.+38     	; 0xe5c <__addsf3x+0x5c>
+     e36:	59 3f       	cpi	r21, 0xF9	; 249
+     e38:	50 f4       	brcc	.+20     	; 0xe4e <__addsf3x+0x4e>
+     e3a:	50 3e       	cpi	r21, 0xE0	; 224
+     e3c:	68 f1       	brcs	.+90     	; 0xe98 <__addsf3x+0x98>
+     e3e:	1a 16       	cp	r1, r26
+     e40:	f0 40       	sbci	r31, 0x00	; 0
+     e42:	a2 2f       	mov	r26, r18
+     e44:	23 2f       	mov	r18, r19
+     e46:	34 2f       	mov	r19, r20
+     e48:	44 27       	eor	r20, r20
+     e4a:	58 5f       	subi	r21, 0xF8	; 248
+     e4c:	f3 cf       	rjmp	.-26     	; 0xe34 <__addsf3x+0x34>
+     e4e:	46 95       	lsr	r20
+     e50:	37 95       	ror	r19
+     e52:	27 95       	ror	r18
+     e54:	a7 95       	ror	r26
+     e56:	f0 40       	sbci	r31, 0x00	; 0
+     e58:	53 95       	inc	r21
+     e5a:	c9 f7       	brne	.-14     	; 0xe4e <__addsf3x+0x4e>
+     e5c:	7e f4       	brtc	.+30     	; 0xe7c <__addsf3x+0x7c>
+     e5e:	1f 16       	cp	r1, r31
+     e60:	ba 0b       	sbc	r27, r26
+     e62:	62 0b       	sbc	r22, r18
+     e64:	73 0b       	sbc	r23, r19
+     e66:	84 0b       	sbc	r24, r20
+     e68:	ba f0       	brmi	.+46     	; 0xe98 <__addsf3x+0x98>
+     e6a:	91 50       	subi	r25, 0x01	; 1
+     e6c:	a1 f0       	breq	.+40     	; 0xe96 <__addsf3x+0x96>
+     e6e:	ff 0f       	add	r31, r31
+     e70:	bb 1f       	adc	r27, r27
+     e72:	66 1f       	adc	r22, r22
+     e74:	77 1f       	adc	r23, r23
+     e76:	88 1f       	adc	r24, r24
+     e78:	c2 f7       	brpl	.-16     	; 0xe6a <__addsf3x+0x6a>
+     e7a:	0e c0       	rjmp	.+28     	; 0xe98 <__addsf3x+0x98>
+     e7c:	ba 0f       	add	r27, r26
+     e7e:	62 1f       	adc	r22, r18
+     e80:	73 1f       	adc	r23, r19
+     e82:	84 1f       	adc	r24, r20
+     e84:	48 f4       	brcc	.+18     	; 0xe98 <__addsf3x+0x98>
+     e86:	87 95       	ror	r24
+     e88:	77 95       	ror	r23
+     e8a:	67 95       	ror	r22
+     e8c:	b7 95       	ror	r27
+     e8e:	f7 95       	ror	r31
+     e90:	9e 3f       	cpi	r25, 0xFE	; 254
+     e92:	08 f0       	brcs	.+2      	; 0xe96 <__addsf3x+0x96>
+     e94:	b3 cf       	rjmp	.-154    	; 0xdfc <__addsf3+0x1e>
+     e96:	93 95       	inc	r25
+     e98:	88 0f       	add	r24, r24
+     e9a:	08 f0       	brcs	.+2      	; 0xe9e <__addsf3x+0x9e>
+     e9c:	99 27       	eor	r25, r25
+     e9e:	ee 0f       	add	r30, r30
+     ea0:	97 95       	ror	r25
+     ea2:	87 95       	ror	r24
+     ea4:	08 95       	ret
+
+00000ea6 <__fixunssfsi>:
+     ea6:	98 d0       	rcall	.+304    	; 0xfd8 <__fp_splitA>
+     ea8:	88 f0       	brcs	.+34     	; 0xecc <__fixunssfsi+0x26>
+     eaa:	9f 57       	subi	r25, 0x7F	; 127
+     eac:	90 f0       	brcs	.+36     	; 0xed2 <__fixunssfsi+0x2c>
+     eae:	b9 2f       	mov	r27, r25
+     eb0:	99 27       	eor	r25, r25
+     eb2:	b7 51       	subi	r27, 0x17	; 23
+     eb4:	a0 f0       	brcs	.+40     	; 0xede <__fixunssfsi+0x38>
+     eb6:	d1 f0       	breq	.+52     	; 0xeec <__fixunssfsi+0x46>
+     eb8:	66 0f       	add	r22, r22
+     eba:	77 1f       	adc	r23, r23
+     ebc:	88 1f       	adc	r24, r24
+     ebe:	99 1f       	adc	r25, r25
+     ec0:	1a f0       	brmi	.+6      	; 0xec8 <__fixunssfsi+0x22>
+     ec2:	ba 95       	dec	r27
+     ec4:	c9 f7       	brne	.-14     	; 0xeb8 <__fixunssfsi+0x12>
+     ec6:	12 c0       	rjmp	.+36     	; 0xeec <__fixunssfsi+0x46>
+     ec8:	b1 30       	cpi	r27, 0x01	; 1
+     eca:	81 f0       	breq	.+32     	; 0xeec <__fixunssfsi+0x46>
+     ecc:	9f d0       	rcall	.+318    	; 0x100c <__fp_zero>
+     ece:	b1 e0       	ldi	r27, 0x01	; 1
+     ed0:	08 95       	ret
+     ed2:	9c c0       	rjmp	.+312    	; 0x100c <__fp_zero>
+     ed4:	67 2f       	mov	r22, r23
+     ed6:	78 2f       	mov	r23, r24
+     ed8:	88 27       	eor	r24, r24
+     eda:	b8 5f       	subi	r27, 0xF8	; 248
+     edc:	39 f0       	breq	.+14     	; 0xeec <__fixunssfsi+0x46>
+     ede:	b9 3f       	cpi	r27, 0xF9	; 249
+     ee0:	cc f3       	brlt	.-14     	; 0xed4 <__fixunssfsi+0x2e>
+     ee2:	86 95       	lsr	r24
+     ee4:	77 95       	ror	r23
+     ee6:	67 95       	ror	r22
+     ee8:	b3 95       	inc	r27
+     eea:	d9 f7       	brne	.-10     	; 0xee2 <__fixunssfsi+0x3c>
+     eec:	3e f4       	brtc	.+14     	; 0xefc <__fixunssfsi+0x56>
+     eee:	90 95       	com	r25
+     ef0:	80 95       	com	r24
+     ef2:	70 95       	com	r23
+     ef4:	61 95       	neg	r22
+     ef6:	7f 4f       	sbci	r23, 0xFF	; 255
+     ef8:	8f 4f       	sbci	r24, 0xFF	; 255
+     efa:	9f 4f       	sbci	r25, 0xFF	; 255
+     efc:	08 95       	ret
+
+00000efe <__floatunsisf>:
+     efe:	e8 94       	clt
+     f00:	09 c0       	rjmp	.+18     	; 0xf14 <__floatsisf+0x12>
+
+00000f02 <__floatsisf>:
+     f02:	97 fb       	bst	r25, 7
+     f04:	3e f4       	brtc	.+14     	; 0xf14 <__floatsisf+0x12>
+     f06:	90 95       	com	r25
+     f08:	80 95       	com	r24
+     f0a:	70 95       	com	r23
+     f0c:	61 95       	neg	r22
+     f0e:	7f 4f       	sbci	r23, 0xFF	; 255
+     f10:	8f 4f       	sbci	r24, 0xFF	; 255
+     f12:	9f 4f       	sbci	r25, 0xFF	; 255
+     f14:	99 23       	and	r25, r25
+     f16:	a9 f0       	breq	.+42     	; 0xf42 <__floatsisf+0x40>
+     f18:	f9 2f       	mov	r31, r25
+     f1a:	96 e9       	ldi	r25, 0x96	; 150
+     f1c:	bb 27       	eor	r27, r27
+     f1e:	93 95       	inc	r25
+     f20:	f6 95       	lsr	r31
+     f22:	87 95       	ror	r24
+     f24:	77 95       	ror	r23
+     f26:	67 95       	ror	r22
+     f28:	b7 95       	ror	r27
+     f2a:	f1 11       	cpse	r31, r1
+     f2c:	f8 cf       	rjmp	.-16     	; 0xf1e <__floatsisf+0x1c>
+     f2e:	fa f4       	brpl	.+62     	; 0xf6e <__floatsisf+0x6c>
+     f30:	bb 0f       	add	r27, r27
+     f32:	11 f4       	brne	.+4      	; 0xf38 <__floatsisf+0x36>
+     f34:	60 ff       	sbrs	r22, 0
+     f36:	1b c0       	rjmp	.+54     	; 0xf6e <__floatsisf+0x6c>
+     f38:	6f 5f       	subi	r22, 0xFF	; 255
+     f3a:	7f 4f       	sbci	r23, 0xFF	; 255
+     f3c:	8f 4f       	sbci	r24, 0xFF	; 255
+     f3e:	9f 4f       	sbci	r25, 0xFF	; 255
+     f40:	16 c0       	rjmp	.+44     	; 0xf6e <__floatsisf+0x6c>
+     f42:	88 23       	and	r24, r24
+     f44:	11 f0       	breq	.+4      	; 0xf4a <__floatsisf+0x48>
+     f46:	96 e9       	ldi	r25, 0x96	; 150
+     f48:	11 c0       	rjmp	.+34     	; 0xf6c <__floatsisf+0x6a>
+     f4a:	77 23       	and	r23, r23
+     f4c:	21 f0       	breq	.+8      	; 0xf56 <__floatsisf+0x54>
+     f4e:	9e e8       	ldi	r25, 0x8E	; 142
+     f50:	87 2f       	mov	r24, r23
+     f52:	76 2f       	mov	r23, r22
+     f54:	05 c0       	rjmp	.+10     	; 0xf60 <__floatsisf+0x5e>
+     f56:	66 23       	and	r22, r22
+     f58:	71 f0       	breq	.+28     	; 0xf76 <__floatsisf+0x74>
+     f5a:	96 e8       	ldi	r25, 0x86	; 134
+     f5c:	86 2f       	mov	r24, r22
+     f5e:	70 e0       	ldi	r23, 0x00	; 0
+     f60:	60 e0       	ldi	r22, 0x00	; 0
+     f62:	2a f0       	brmi	.+10     	; 0xf6e <__floatsisf+0x6c>
+     f64:	9a 95       	dec	r25
+     f66:	66 0f       	add	r22, r22
+     f68:	77 1f       	adc	r23, r23
+     f6a:	88 1f       	adc	r24, r24
+     f6c:	da f7       	brpl	.-10     	; 0xf64 <__floatsisf+0x62>
+     f6e:	88 0f       	add	r24, r24
+     f70:	96 95       	lsr	r25
+     f72:	87 95       	ror	r24
+     f74:	97 f9       	bld	r25, 7
+     f76:	08 95       	ret
+
+00000f78 <__fp_inf>:
+     f78:	97 f9       	bld	r25, 7
+     f7a:	9f 67       	ori	r25, 0x7F	; 127
+     f7c:	80 e8       	ldi	r24, 0x80	; 128
+     f7e:	70 e0       	ldi	r23, 0x00	; 0
+     f80:	60 e0       	ldi	r22, 0x00	; 0
+     f82:	08 95       	ret
+
+00000f84 <__fp_nan>:
+     f84:	9f ef       	ldi	r25, 0xFF	; 255
+     f86:	80 ec       	ldi	r24, 0xC0	; 192
+     f88:	08 95       	ret
+
+00000f8a <__fp_pscA>:
+     f8a:	00 24       	eor	r0, r0
+     f8c:	0a 94       	dec	r0
+     f8e:	16 16       	cp	r1, r22
+     f90:	17 06       	cpc	r1, r23
+     f92:	18 06       	cpc	r1, r24
+     f94:	09 06       	cpc	r0, r25
+     f96:	08 95       	ret
+
+00000f98 <__fp_pscB>:
+     f98:	00 24       	eor	r0, r0
+     f9a:	0a 94       	dec	r0
+     f9c:	12 16       	cp	r1, r18
+     f9e:	13 06       	cpc	r1, r19
+     fa0:	14 06       	cpc	r1, r20
+     fa2:	05 06       	cpc	r0, r21
+     fa4:	08 95       	ret
+
+00000fa6 <__fp_round>:
+     fa6:	09 2e       	mov	r0, r25
+     fa8:	03 94       	inc	r0
+     faa:	00 0c       	add	r0, r0
+     fac:	11 f4       	brne	.+4      	; 0xfb2 <__fp_round+0xc>
+     fae:	88 23       	and	r24, r24
+     fb0:	52 f0       	brmi	.+20     	; 0xfc6 <__fp_round+0x20>
+     fb2:	bb 0f       	add	r27, r27
+     fb4:	40 f4       	brcc	.+16     	; 0xfc6 <__fp_round+0x20>
+     fb6:	bf 2b       	or	r27, r31
+     fb8:	11 f4       	brne	.+4      	; 0xfbe <__fp_round+0x18>
+     fba:	60 ff       	sbrs	r22, 0
+     fbc:	04 c0       	rjmp	.+8      	; 0xfc6 <__fp_round+0x20>
+     fbe:	6f 5f       	subi	r22, 0xFF	; 255
+     fc0:	7f 4f       	sbci	r23, 0xFF	; 255
+     fc2:	8f 4f       	sbci	r24, 0xFF	; 255
+     fc4:	9f 4f       	sbci	r25, 0xFF	; 255
+     fc6:	08 95       	ret
+
+00000fc8 <__fp_split3>:
+     fc8:	57 fd       	sbrc	r21, 7
+     fca:	90 58       	subi	r25, 0x80	; 128
+     fcc:	44 0f       	add	r20, r20
+     fce:	55 1f       	adc	r21, r21
+     fd0:	59 f0       	breq	.+22     	; 0xfe8 <__fp_splitA+0x10>
+     fd2:	5f 3f       	cpi	r21, 0xFF	; 255
+     fd4:	71 f0       	breq	.+28     	; 0xff2 <__fp_splitA+0x1a>
+     fd6:	47 95       	ror	r20
+
+00000fd8 <__fp_splitA>:
+     fd8:	88 0f       	add	r24, r24
+     fda:	97 fb       	bst	r25, 7
+     fdc:	99 1f       	adc	r25, r25
+     fde:	61 f0       	breq	.+24     	; 0xff8 <__fp_splitA+0x20>
+     fe0:	9f 3f       	cpi	r25, 0xFF	; 255
+     fe2:	79 f0       	breq	.+30     	; 0x1002 <__fp_splitA+0x2a>
+     fe4:	87 95       	ror	r24
+     fe6:	08 95       	ret
+     fe8:	12 16       	cp	r1, r18
+     fea:	13 06       	cpc	r1, r19
+     fec:	14 06       	cpc	r1, r20
+     fee:	55 1f       	adc	r21, r21
+     ff0:	f2 cf       	rjmp	.-28     	; 0xfd6 <__fp_split3+0xe>
+     ff2:	46 95       	lsr	r20
+     ff4:	f1 df       	rcall	.-30     	; 0xfd8 <__fp_splitA>
+     ff6:	08 c0       	rjmp	.+16     	; 0x1008 <__fp_splitA+0x30>
+     ff8:	16 16       	cp	r1, r22
+     ffa:	17 06       	cpc	r1, r23
+     ffc:	18 06       	cpc	r1, r24
+     ffe:	99 1f       	adc	r25, r25
+    1000:	f1 cf       	rjmp	.-30     	; 0xfe4 <__fp_splitA+0xc>
+    1002:	86 95       	lsr	r24
+    1004:	71 05       	cpc	r23, r1
+    1006:	61 05       	cpc	r22, r1
+    1008:	08 94       	sec
+    100a:	08 95       	ret
+
+0000100c <__fp_zero>:
+    100c:	e8 94       	clt
+
+0000100e <__fp_szero>:
+    100e:	bb 27       	eor	r27, r27
+    1010:	66 27       	eor	r22, r22
+    1012:	77 27       	eor	r23, r23
+    1014:	cb 01       	movw	r24, r22
+    1016:	97 f9       	bld	r25, 7
+    1018:	08 95       	ret
+
+0000101a <__mulsf3>:
+    101a:	0b d0       	rcall	.+22     	; 0x1032 <__mulsf3x>
+    101c:	c4 cf       	rjmp	.-120    	; 0xfa6 <__fp_round>
+    101e:	b5 df       	rcall	.-150    	; 0xf8a <__fp_pscA>
+    1020:	28 f0       	brcs	.+10     	; 0x102c <__mulsf3+0x12>
+    1022:	ba df       	rcall	.-140    	; 0xf98 <__fp_pscB>
+    1024:	18 f0       	brcs	.+6      	; 0x102c <__mulsf3+0x12>
+    1026:	95 23       	and	r25, r21
+    1028:	09 f0       	breq	.+2      	; 0x102c <__mulsf3+0x12>
+    102a:	a6 cf       	rjmp	.-180    	; 0xf78 <__fp_inf>
+    102c:	ab cf       	rjmp	.-170    	; 0xf84 <__fp_nan>
+    102e:	11 24       	eor	r1, r1
+    1030:	ee cf       	rjmp	.-36     	; 0x100e <__fp_szero>
+
+00001032 <__mulsf3x>:
+    1032:	ca df       	rcall	.-108    	; 0xfc8 <__fp_split3>
+    1034:	a0 f3       	brcs	.-24     	; 0x101e <__mulsf3+0x4>
+
+00001036 <__mulsf3_pse>:
+    1036:	95 9f       	mul	r25, r21
+    1038:	d1 f3       	breq	.-12     	; 0x102e <__mulsf3+0x14>
+    103a:	95 0f       	add	r25, r21
+    103c:	50 e0       	ldi	r21, 0x00	; 0
+    103e:	55 1f       	adc	r21, r21
+    1040:	62 9f       	mul	r22, r18
+    1042:	f0 01       	movw	r30, r0
+    1044:	72 9f       	mul	r23, r18
+    1046:	bb 27       	eor	r27, r27
+    1048:	f0 0d       	add	r31, r0
+    104a:	b1 1d       	adc	r27, r1
+    104c:	63 9f       	mul	r22, r19
+    104e:	aa 27       	eor	r26, r26
+    1050:	f0 0d       	add	r31, r0
+    1052:	b1 1d       	adc	r27, r1
+    1054:	aa 1f       	adc	r26, r26
+    1056:	64 9f       	mul	r22, r20
+    1058:	66 27       	eor	r22, r22
+    105a:	b0 0d       	add	r27, r0
+    105c:	a1 1d       	adc	r26, r1
+    105e:	66 1f       	adc	r22, r22
+    1060:	82 9f       	mul	r24, r18
+    1062:	22 27       	eor	r18, r18
+    1064:	b0 0d       	add	r27, r0
+    1066:	a1 1d       	adc	r26, r1
+    1068:	62 1f       	adc	r22, r18
+    106a:	73 9f       	mul	r23, r19
+    106c:	b0 0d       	add	r27, r0
+    106e:	a1 1d       	adc	r26, r1
+    1070:	62 1f       	adc	r22, r18
+    1072:	83 9f       	mul	r24, r19
+    1074:	a0 0d       	add	r26, r0
+    1076:	61 1d       	adc	r22, r1
+    1078:	22 1f       	adc	r18, r18
+    107a:	74 9f       	mul	r23, r20
+    107c:	33 27       	eor	r19, r19
+    107e:	a0 0d       	add	r26, r0
+    1080:	61 1d       	adc	r22, r1
+    1082:	23 1f       	adc	r18, r19
+    1084:	84 9f       	mul	r24, r20
+    1086:	60 0d       	add	r22, r0
+    1088:	21 1d       	adc	r18, r1
+    108a:	82 2f       	mov	r24, r18
+    108c:	76 2f       	mov	r23, r22
+    108e:	6a 2f       	mov	r22, r26
+    1090:	11 24       	eor	r1, r1
+    1092:	9f 57       	subi	r25, 0x7F	; 127
+    1094:	50 40       	sbci	r21, 0x00	; 0
+    1096:	8a f0       	brmi	.+34     	; 0x10ba <__mulsf3_pse+0x84>
+    1098:	e1 f0       	breq	.+56     	; 0x10d2 <__mulsf3_pse+0x9c>
+    109a:	88 23       	and	r24, r24
+    109c:	4a f0       	brmi	.+18     	; 0x10b0 <__mulsf3_pse+0x7a>
+    109e:	ee 0f       	add	r30, r30
+    10a0:	ff 1f       	adc	r31, r31
+    10a2:	bb 1f       	adc	r27, r27
+    10a4:	66 1f       	adc	r22, r22
+    10a6:	77 1f       	adc	r23, r23
+    10a8:	88 1f       	adc	r24, r24
+    10aa:	91 50       	subi	r25, 0x01	; 1
+    10ac:	50 40       	sbci	r21, 0x00	; 0
+    10ae:	a9 f7       	brne	.-22     	; 0x109a <__mulsf3_pse+0x64>
+    10b0:	9e 3f       	cpi	r25, 0xFE	; 254
+    10b2:	51 05       	cpc	r21, r1
+    10b4:	70 f0       	brcs	.+28     	; 0x10d2 <__mulsf3_pse+0x9c>
+    10b6:	60 cf       	rjmp	.-320    	; 0xf78 <__fp_inf>
+    10b8:	aa cf       	rjmp	.-172    	; 0x100e <__fp_szero>
+    10ba:	5f 3f       	cpi	r21, 0xFF	; 255
+    10bc:	ec f3       	brlt	.-6      	; 0x10b8 <__mulsf3_pse+0x82>
+    10be:	98 3e       	cpi	r25, 0xE8	; 232
+    10c0:	dc f3       	brlt	.-10     	; 0x10b8 <__mulsf3_pse+0x82>
+    10c2:	86 95       	lsr	r24
+    10c4:	77 95       	ror	r23
+    10c6:	67 95       	ror	r22
+    10c8:	b7 95       	ror	r27
+    10ca:	f7 95       	ror	r31
+    10cc:	e7 95       	ror	r30
+    10ce:	9f 5f       	subi	r25, 0xFF	; 255
+    10d0:	c1 f7       	brne	.-16     	; 0x10c2 <__mulsf3_pse+0x8c>
+    10d2:	fe 2b       	or	r31, r30
+    10d4:	88 0f       	add	r24, r24
+    10d6:	91 1d       	adc	r25, r1
+    10d8:	96 95       	lsr	r25
+    10da:	87 95       	ror	r24
+    10dc:	97 f9       	bld	r25, 7
+    10de:	08 95       	ret
+
+000010e0 <__divmodhi4>:
+    10e0:	97 fb       	bst	r25, 7
+    10e2:	07 2e       	mov	r0, r23
+    10e4:	16 f4       	brtc	.+4      	; 0x10ea <__divmodhi4+0xa>
+    10e6:	00 94       	com	r0
+    10e8:	06 d0       	rcall	.+12     	; 0x10f6 <__divmodhi4_neg1>
+    10ea:	77 fd       	sbrc	r23, 7
+    10ec:	08 d0       	rcall	.+16     	; 0x10fe <__divmodhi4_neg2>
+    10ee:	2d d0       	rcall	.+90     	; 0x114a <__udivmodhi4>
+    10f0:	07 fc       	sbrc	r0, 7
+    10f2:	05 d0       	rcall	.+10     	; 0x10fe <__divmodhi4_neg2>
+    10f4:	3e f4       	brtc	.+14     	; 0x1104 <__divmodhi4_exit>
+
+000010f6 <__divmodhi4_neg1>:
+    10f6:	90 95       	com	r25
+    10f8:	81 95       	neg	r24
+    10fa:	9f 4f       	sbci	r25, 0xFF	; 255
+    10fc:	08 95       	ret
+
+000010fe <__divmodhi4_neg2>:
+    10fe:	70 95       	com	r23
+    1100:	61 95       	neg	r22
+    1102:	7f 4f       	sbci	r23, 0xFF	; 255
+
+00001104 <__divmodhi4_exit>:
+    1104:	08 95       	ret
+
+00001106 <__udivmodsi4>:
+    1106:	a1 e2       	ldi	r26, 0x21	; 33
+    1108:	1a 2e       	mov	r1, r26
+    110a:	aa 1b       	sub	r26, r26
+    110c:	bb 1b       	sub	r27, r27
+    110e:	fd 01       	movw	r30, r26
+    1110:	0d c0       	rjmp	.+26     	; 0x112c <__udivmodsi4_ep>
+
+00001112 <__udivmodsi4_loop>:
+    1112:	aa 1f       	adc	r26, r26
+    1114:	bb 1f       	adc	r27, r27
+    1116:	ee 1f       	adc	r30, r30
+    1118:	ff 1f       	adc	r31, r31
+    111a:	a2 17       	cp	r26, r18
+    111c:	b3 07       	cpc	r27, r19
+    111e:	e4 07       	cpc	r30, r20
+    1120:	f5 07       	cpc	r31, r21
+    1122:	20 f0       	brcs	.+8      	; 0x112c <__udivmodsi4_ep>
+    1124:	a2 1b       	sub	r26, r18
+    1126:	b3 0b       	sbc	r27, r19
+    1128:	e4 0b       	sbc	r30, r20
+    112a:	f5 0b       	sbc	r31, r21
+
+0000112c <__udivmodsi4_ep>:
+    112c:	66 1f       	adc	r22, r22
+    112e:	77 1f       	adc	r23, r23
+    1130:	88 1f       	adc	r24, r24
+    1132:	99 1f       	adc	r25, r25
+    1134:	1a 94       	dec	r1
+    1136:	69 f7       	brne	.-38     	; 0x1112 <__udivmodsi4_loop>
+    1138:	60 95       	com	r22
+    113a:	70 95       	com	r23
+    113c:	80 95       	com	r24
+    113e:	90 95       	com	r25
+    1140:	9b 01       	movw	r18, r22
+    1142:	ac 01       	movw	r20, r24
+    1144:	bd 01       	movw	r22, r26
+    1146:	cf 01       	movw	r24, r30
+    1148:	08 95       	ret
+
+0000114a <__udivmodhi4>:
+    114a:	aa 1b       	sub	r26, r26
+    114c:	bb 1b       	sub	r27, r27
+    114e:	51 e1       	ldi	r21, 0x11	; 17
+    1150:	07 c0       	rjmp	.+14     	; 0x1160 <__udivmodhi4_ep>
+
+00001152 <__udivmodhi4_loop>:
+    1152:	aa 1f       	adc	r26, r26
+    1154:	bb 1f       	adc	r27, r27
+    1156:	a6 17       	cp	r26, r22
+    1158:	b7 07       	cpc	r27, r23
+    115a:	10 f0       	brcs	.+4      	; 0x1160 <__udivmodhi4_ep>
+    115c:	a6 1b       	sub	r26, r22
+    115e:	b7 0b       	sbc	r27, r23
+
+00001160 <__udivmodhi4_ep>:
+    1160:	88 1f       	adc	r24, r24
+    1162:	99 1f       	adc	r25, r25
+    1164:	5a 95       	dec	r21
+    1166:	a9 f7       	brne	.-22     	; 0x1152 <__udivmodhi4_loop>
+    1168:	80 95       	com	r24
+    116a:	90 95       	com	r25
+    116c:	bc 01       	movw	r22, r24
+    116e:	cd 01       	movw	r24, r26
+    1170:	08 95       	ret
+
+00001172 <_exit>:
+    1172:	f8 94       	cli
+
+00001174 <__stop_program>:
+    1174:	ff cf       	rjmp	.-2      	; 0x1174 <__stop_program>
